@@ -6,52 +6,34 @@ const config = {
   MaxVoltage: 1000,
   MinCurrent: 5,
   MaxCurrent: 20,
-  Polarity: "bipolar", 
-  MeasurementValues: "both", 
+  Polarity: "bipolar", // nebo "unipolar"
+  MeasurementValues: "both", // "voltage", "current", "both"
   BufferSize: 25
 }
 
 let measurementId = 0
 let buffer = []
 
-
-app.get("/api/configuration", (req, res) => {
+app.get("/api", (req, res) => {
   res.json(config)
 })
 
-
-app.get("/api/status", (req, res) => {
+app.get("/status", (req, res) => {
   res.json({
-    UsedPolarity: config.Polarity, 
-    NewDataReady: buffer.length > 0 
+    polarity: config.Polarity,
+    newDataReady: true
   })
 })
 
-
 function generateMeasurement(polarity = "unipolar", type = "both") {
-  const createValue = () => {
-    let measurement = {
-      posVoltage: null,
-      posCurrent: null,
-      negVoltage: null,
-      negCurrent: null
-    }
-    if (type === "both" || type === "voltage") {
-      measurement.posVoltage = Math.floor(Math.random() * (config.MaxVoltage - config.MinVoltage) + config.MinVoltage)
-      if (polarity === "bipolar") {
-        measurement.negVoltage = Math.floor(Math.random() * (config.MaxVoltage - config.MinVoltage) + config.MinVoltage)
-      }
-    }
-
-    if (type === "both" || type === "current") {
-      measurement.posCurrent = Math.floor(Math.random() * (config.MaxCurrent - config.MinCurrent) + config.MinCurrent)
-      if (polarity === "bipolar") {
-        measurement.negCurrent = Math.floor(Math.random() * (config.MaxCurrent - config.MinCurrent) + config.MinCurrent)
-      }
-    }
-
-    return measurement
-  }
+  const createValue = () => ({
+    posVoltage: Math.floor(Math.random() * (config.MaxVoltage - config.MinVoltage) + config.MinVoltage),
+    posCurrent: type === "voltage" ? null : Math.floor(Math.random() * (config.MaxCurrent - config.MinCurrent) + config.MinCurrent),
+    negVoltage: polarity === "bipolar" ? Math.floor(Math.random() * (config.MaxVoltage - config.MinVoltage) + config.MinVoltage) : null,
+    negCurrent: (type === "voltage" || polarity === "unipolar")
+      ? null
+      : Math.floor(Math.random() * (config.MaxCurrent - config.MinCurrent) + config.MinCurrent)
+  })
 
   const valueCount = Math.random() > 0.5 ? 1 : 2
 
@@ -62,44 +44,14 @@ function generateMeasurement(polarity = "unipolar", type = "both") {
   }
 }
 
-app.get("/api/measurements", (req, res) => {
+app.get("/measurements", (req, res) => {
   const newMeasurement = generateMeasurement(config.Polarity, config.MeasurementValues)
   buffer.push(newMeasurement)
-  
-  if (buffer.length > config.BufferSize) {
-    buffer.shift()
-  }
-  res.json({ 
-    measuredStorage: buffer 
-  })
-})
+  if (buffer.length > config.BufferSize) buffer.shift()
 
-app.delete("/api/measurements", (req, res) => {
-  buffer = []
-  measurementId = 0
-  res.json({ message: "Buffer cleared" })
-})
-
-app.put("/api/configuration", express.json(), (req, res) => {
-  const { Polarity, MeasurementValues } = req.body
-  
-  if (Polarity && ["unipolar", "bipolar"].includes(Polarity)) {
-    config.Polarity = Polarity
-  }
-  
-  if (MeasurementValues && ["both", "voltage", "current"].includes(MeasurementValues)) {
-    config.MeasurementValues = MeasurementValues
-  }
-  
-  res.json(config)
+  res.json({ measuredStorage: buffer })
 })
 
 app.listen(5000, () => {
   console.log("Server is running on port 5000")
-  console.log("Available endpoints:")
-  console.log("GET /api/configuration - Získat konfiguraci")
-  console.log("GET /api/status - Získat status")
-  console.log("GET /api/measurements - Získat měření")
-  console.log("PUT /api/configuration - Změnit konfiguraci")
-  console.log("DELETE /api/measurements - Vymazat buffer")
 })
