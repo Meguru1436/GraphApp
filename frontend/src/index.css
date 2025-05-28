@@ -1,4 +1,4 @@
-/* src/index.css */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,8 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34; /* Tmavé pozadí */
-  color: #abb2bf; /* Světlý text */
+  background-color: #282c34; 
+  color: #abb2bf; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,34 +18,34 @@ body {
 
 #root {
   width: 100%;
-  max-width: 1200px; /* Omezení šířky hlavního obsahu */
+  max-width: 1200px;
 }
 
 .container {
-  display: flex; /* Použijeme flexbox pro hlavní layout */
+  display: flex;
   gap: 20px;
-  align-items: flex-start; /* Zarovnáme položky na začátek (nahoru) */
+  align-items: flex-start;
 }
 
-/* Nová úprava pro sekce */
+
 .graph-section {
-  flex: 3; /* Graf zabírá 3 části prostoru */
+  flex: 3; 
   display: flex;
   flex-direction: column;
 }
 
 .status-data-section {
-  flex: 1; /* Status a Data Series zabírají 1 část prostoru */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Toto zarovná "Data Series" ke spodnímu okraji rodiče */
-  height: 100%; /* Zajistí, že status-data-section se roztáhne na celou výšku */
+  justify-content: flex-end; 
+  height: 100%; 
 }
 
-/* Upravíme také výšku graph-placeholder, aby odpovídala flex kontextu */
+
 .graph-placeholder {
   width: 100%;
-  flex-grow: 1; /* Graf vyplní zbývající vertikální prostor */
+  flex-grow: 1; 
   background-color: #1a1e24;
   border-radius: 8px;
   display: flex;
@@ -53,12 +53,12 @@ body {
   align-items: center;
   color: #61dafb;
   font-size: 2em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  min-height: 400px; /* Původní výška jako minimální */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  min-height: 400px; 
 }
 
 .card {
-  background-color: #1a1e24; /* Tmavší pozadí pro karty */
+  background-color: #1a1e24; 
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -67,10 +67,10 @@ body {
 .card-title {
   font-size: 1.5em;
   margin-bottom: 20px;
-  color: #61dafb; /* Modrý nadpis */
+  color: #ffffff; 
 }
 
-/* System Status */
+
 .status-item {
   display: flex;
   justify-content: space-between;
@@ -81,7 +81,7 @@ body {
   font-weight: bold;
 }
 
-/* Data Series */
+
 .data-series-option {
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #a74848;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 20px;
@@ -129,18 +129,18 @@ body {
   width: 16px;
   left: 2px;
   bottom: 2px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #61dafb;
+  background-color: #3f5e3c;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #61dafb;
+  box-shadow: 0 0 1px #00c8ff;
 }
 
 input:checked + .slider:before {
@@ -149,7 +149,7 @@ input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-/* Rounded sliders */
+
 .slider.round {
   border-radius: 20px;
 }
@@ -171,11 +171,10 @@ input:checked + .slider:before {
   margin-right: 5px;
 }
 
-/* Graph placeholder */
+
 .graph-placeholder {
   width: 100%;
-  height: 400px; /* Pevná výška pro graf */
-  background-color: #1a1e24; /* Stejné pozadí jako karty */
+  background-color: #1a1e24; 
   border-radius: 8px;
   display: flex;
   justify-content: center;

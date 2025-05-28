@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './index.css'; 
-import { Line } from 'react-chartjs-2'; // Importujeme Line komponentu z react-chartjs-2
+import './index.css';
+import { Line } from 'react-chartjs-2';
 import {
-  Chart as ChartJS, // Import Chart.js základní třídy
+  Chart as ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
@@ -12,7 +12,6 @@ import {
   Legend,
 } from 'chart.js';
 
-// Registrace komponent Chart.js, které budeme používat
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -28,71 +27,88 @@ function App() {
   const [status, setStatus] = useState(null);
   const [measurements, setMeasurements] = useState([]);
 
-  // Stavy pro zapínání/vypínání datových řad
+  
   const [showVoltagePos, setShowVoltagePos] = useState(true);
-  const [showVoltageNeg, setShowVoltageNeg] = useState(false); // Defaultně vypnuto, pokud je bipolar
+  const [showVoltageNeg, setShowVoltageNeg] = useState(false);
   const [showCurrentPos, setShowCurrentPos] = useState(true);
-  const [showCurrentNeg, setShowCurrentNeg] = useState(false); // Defaultně vypnuto, pokud je bipolar
+  const [showCurrentNeg, setShowCurrentNeg] = useState(false);
 
+  
+  const voltagePosColor = 'rgba(255, 150, 150, 1)'; 
+  const voltagePosBgColor = 'rgba(255, 150, 150, 0.2)';
+  const voltageNegColor = 'rgba(200, 50, 50, 1)';     
+  const voltageNegBgColor = 'rgba(200, 50, 50, 0.2)';
+  const currentPosColor = 'rgba(0, 200, 200, 1)';   
+  const currentPosBgColor = 'rgba(0, 200, 200, 0.5)';
+  const currentNegColor = 'rgba(0, 0, 200, 1)';     
+  const currentNegBgColor = 'rgba(0, 0, 200, 0.5)';
+
+
+  
   useEffect(() => {
-    // Načtení konfigurace při startu
     fetch("/api")
       .then(res => res.json())
       .then(data => {
         console.log("Konfigurace:", data);
         setConfig(data);
-        // Nastavíme počáteční stav pro negativní měření na základě polarity
+        
         if (data.Polarity === "unipolar") {
-          setShowVoltageNeg(false);
+          setShowVoltageNeg(false); 
           setShowCurrentNeg(false);
+        } else { 
+          setShowVoltageNeg(data.MeasurementValues === "both" || data.MeasurementValues === "voltage");
+          setShowCurrentNeg(data.MeasurementValues === "both" || data.MeasurementValues === "current");
         }
+        
+        setShowVoltagePos(data.MeasurementValues === "both" || data.MeasurementValues === "voltage");
+        setShowCurrentPos(data.MeasurementValues === "both" || data.MeasurementValues === "current");
       })
       .catch(error => console.error("Chyba při načítání konfigurace:", error));
   }, []);
 
+  
   useEffect(() => {
-    // Pravidelné získávání statusu a případných měření
     const interval = setInterval(() => {
-      fetch("/status")
+      fetch("/status") 
         .then(res => res.json())
         .then(currentStatus => {
-          setStatus(currentStatus); // Uložíme status
-          if (currentStatus.newDataReady) {
-            fetch("/measurements")
+          setStatus(currentStatus);
+          
+          if (currentStatus.newDataReady) { 
+            fetch("/measurements") 
               .then(res => res.json())
               .then(data => {
-                console.log("Nová měření:", data.measuredStorage); // Logování
-                setMeasurements(data.measuredStorage); // Uložíme měření
+                console.log("Nová měření:", data.measuredStorage);
+                setMeasurements(data.measuredStorage);
               })
               .catch(error => console.error("Chyba při načítání měření:", error));
           }
         })
         .catch(error => console.error("Chyba při načítání statusu:", error));
-    }, 1000);
+    }, 1000); 
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); 
   }, []);
 
-  // Příprava dat pro Chart.js
+  
   const chartData = {
-    labels: measurements.map((m, index) => index + 1), // Použijeme index jako label pro jednoduchost
+    labels: measurements.map((m, index) => m.id), 
     datasets: [],
   };
 
+  
   const chartOptions = {
     responsive: true,
-    maintainAspectRatio: false, // Důležité pro plné vyplnění kontejneru
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top',
         labels: {
-            color: '#abb2bf', // Barva popisků legendy
+            color: '#abb2bf', 
         }
       },
       title: {
-        display: true,
-        text: 'Measured Values Over Time',
-        color: '#abb2bf', // Barva nadpisu
+        display: false, 
       },
       tooltip: {
         mode: 'index',
@@ -103,20 +119,21 @@ function App() {
       x: {
         title: {
           display: true,
-          text: 'Measurement ID',
+          text: 'Measurement ID', 
           color: '#abb2bf',
         },
         ticks: {
-          color: '#abb2bf', // Barva popisků osy X
+          color: '#abb2bf',
         },
         grid: {
-          color: 'rgba(255, 255, 255, 0.1)', // Barva mřížky
+          color: 'rgba(255, 255, 255, 0.1)', 
         },
       },
-      yVoltage: { // Osa pro napětí
+      
+      yVoltage: {
         type: 'linear',
-        display: 'auto', // Zobrazí osu jen pokud je použita
-        position: 'left',
+        display: 'auto',
+        position: 'right', 
         title: {
           display: true,
           text: 'Voltage [kV]',
@@ -125,14 +142,18 @@ function App() {
         ticks: {
           color: '#abb2bf',
         },
+        
+        min: config ? (config.Polarity === "bipolar" ? -config.MaxVoltage / 1000 : config.MinVoltage / 1000) : -5.5,
+        max: config ? config.MaxVoltage / 1000 : 5.5,
         grid: {
           color: 'rgba(255, 255, 255, 0.1)',
         },
       },
-      yCurrent: { // Osa pro proud
+      
+      yCurrent: {
         type: 'linear',
         display: 'auto',
-        position: 'right', // Na pravé straně
+        position: 'left', 
         title: {
           display: true,
           text: 'Current [A]',
@@ -141,63 +162,82 @@ function App() {
         ticks: {
           color: '#abb2bf',
         },
+        
+        min: config ? (config.Polarity === "bipolar" ? -config.MaxCurrent : config.MinCurrent) : -30,
+        max: config ? config.MaxCurrent : 30,
         grid: {
-          drawOnChartArea: false, // Nezobrazovat mřížku pro tuto osu, aby se nepřekrývala
+          drawOnChartArea: false, 
         },
       },
     },
   };
 
-  // Dynamické přidávání datových řad na základě stavu a dostupnosti dat
-  if (showVoltagePos && (config?.MeasurementValues === "both" || config?.MeasurementValues === "voltage")) {
+  
+  const getPointStyle = (measuredValues) => {
+    return measuredValues && measuredValues.length > 1 ? 'disc' : 'circle';
+  };
+
+  
+  if (config && showVoltagePos && (config.MeasurementValues === "both" || config.MeasurementValues === "voltage")) {
     chartData.datasets.push({
       label: 'Voltage (kV+)',
-      data: measurements.map(m => m.measuredValues[0]?.posVoltage),
-      borderColor: 'orange',
-      backgroundColor: 'rgba(255, 165, 0, 0.5)',
-      yAxisID: 'yVoltage', // Použijeme osu pro napětí
-      tension: 0.1,
-      pointRadius: 3,
-    });
-  }
-
-  if (showVoltageNeg && config?.Polarity === "bipolar" && (config?.MeasurementValues === "both" || config?.MeasurementValues === "voltage")) {
-    chartData.datasets.push({
-      label: 'Voltage (kV-)',
-      data: measurements.map(m => m.measuredValues[0]?.negVoltage),
-      borderColor: 'red',
-      backgroundColor: 'rgba(255, 0, 0, 0.5)',
+      data: measurements.map(m => m.measuredValues[0]?.posVoltage !== null ? m.measuredValues[0]?.posVoltage / 1000 : null),
+      borderColor: voltagePosColor,
+      backgroundColor: voltagePosBgColor,
       yAxisID: 'yVoltage',
       tension: 0.1,
       pointRadius: 3,
+      pointStyle: measurements.map(m => getPointStyle(m.measuredValues)),
+      borderDash: [5, 5],
     });
   }
 
-  if (showCurrentPos && (config?.MeasurementValues === "both" || config?.MeasurementValues === "current")) {
+ 
+  if (config && showVoltageNeg && config.Polarity === "bipolar" && (config.MeasurementValues === "both" || config.MeasurementValues === "voltage")) {
+    chartData.datasets.push({
+      label: 'Voltage (kV-)',
+      data: measurements.map(m => m.measuredValues[0]?.negVoltage !== null ? m.measuredValues[0]?.negVoltage / 1000 : null),
+      borderColor: voltageNegColor,
+      backgroundColor: voltageNegBgColor,
+      yAxisID: 'yVoltage',
+      tension: 0.1,
+      pointRadius: 3,
+      pointStyle: measurements.map(m => getPointStyle(m.measuredValues)),
+      borderDash: [5, 5],
+    });
+  }
+
+  
+  if (config && showCurrentPos && (config.MeasurementValues === "both" || config.MeasurementValues === "current")) {
     chartData.datasets.push({
       label: 'Current (A+)',
       data: measurements.map(m => m.measuredValues[0]?.posCurrent),
-      borderColor: 'blue',
-      backgroundColor: 'rgba(0, 0, 255, 0.5)',
-      yAxisID: 'yCurrent', // Použijeme osu pro proud
-      tension: 0.1,
-      pointRadius: 3,
-    });
-  }
-
-  if (showCurrentNeg && config?.Polarity === "bipolar" && (config?.MeasurementValues === "both" || config?.MeasurementValues === "current")) {
-    chartData.datasets.push({
-      label: 'Current (A-)',
-      data: measurements.map(m => m.measuredValues[0]?.negCurrent),
-      borderColor: 'purple',
-      backgroundColor: 'rgba(128, 0, 128, 0.5)',
+      borderColor: currentPosColor,
+      backgroundColor: currentPosBgColor,
       yAxisID: 'yCurrent',
       tension: 0.1,
       pointRadius: 3,
+      pointStyle: measurements.map(m => getPointStyle(m.measuredValues)),
+      borderDash: [5, 5],
     });
   }
 
-  // Funkce pro přepínání stavu checkboxů
+  
+  if (config && showCurrentNeg && config.Polarity === "bipolar" && (config.MeasurementValues === "both" || config.MeasurementValues === "current")) {
+    chartData.datasets.push({
+      label: 'Current (A-)',
+      data: measurements.map(m => m.measuredValues[0]?.negCurrent),
+      borderColor: currentNegColor,
+      backgroundColor: currentNegBgColor,
+      yAxisID: 'yCurrent',
+      tension: 0.1,
+      pointRadius: 3,
+      pointStyle: measurements.map(m => getPointStyle(m.measuredValues)),
+      borderDash: [5, 5],
+    });
+  }
+
+  
   const handleToggleChange = (setter, currentState) => {
     setter(!currentState);
   };
@@ -208,8 +248,8 @@ function App() {
         <div className="card">
           <h2 className="card-title">Graph</h2>
           <div style={{ position: 'relative', height: '400px', width: '100%' }}>
-            {/* Zde vykreslíme graf */}
-            <Line data={chartData} options={chartOptions} />
+            
+            {config ? <Line data={chartData} options={chartOptions} /> : <p>Loading graph data...</p>}
           </div>
         </div>
       </div>
@@ -223,25 +263,24 @@ function App() {
           </div>
           <div className="status-item">
             <span className="status-label">Polarity</span>
-            <span>{status ? status.polarity : 'N/A'}</span>
+            <span>{config ? config.Polarity : 'N/A'}</span> 
           </div>
           <div className="status-item">
             <span className="status-label">Measurements</span>
-            <span>{config ? config.MeasurementValues : 'N/A'}</span>
+            <span>{config ? config.MeasurementValues : 'N/A'}</span> 
           </div>
           <div className="status-item">
             <span className="status-label">Buffer Size</span>
-            <span>{config ? config.BufferSize : 'N/A'}</span>
+            <span>{config ? config.BufferSize : 'N/A'}</span> 
           </div>
         </div>
 
-        {/* Přidáno style={{ marginTop: '20px' }} pro oddělení od System Status */}
         <div className="card data-series" style={{ marginTop: '20px' }}>
           <h2 className="card-title">Data Series</h2>
-          {/* Checkboxy pro přepínání grafů */}
-          {(config?.MeasurementValues === "both" || config?.MeasurementValues === "voltage") && (
+    
+          {config && (config.MeasurementValues === "both" || config.MeasurementValues === "voltage") && (
             <div className="data-series-option">
-              <div className="color-dot" style={{ backgroundColor: 'orange' }}></div>
+              <div className="color-dot" style={{ backgroundColor: voltagePosColor }}></div>
               <span>Voltage (kV+)</span>
               <label className="toggle-switch">
                 <input
@@ -253,9 +292,9 @@ function App() {
               </label>
             </div>
           )}
-          {config && config.Polarity === "bipolar" && (config?.MeasurementValues === "both" || config?.MeasurementValues === "voltage") && (
+          {config && config.Polarity === "bipolar" && (config.MeasurementValues === "both" || config.MeasurementValues === "voltage") && (
             <div className="data-series-option">
-              <div className="color-dot" style={{ backgroundColor: 'red' }}></div>
+              <div className="color-dot" style={{ backgroundColor: voltageNegColor }}></div>
               <span>Voltage (kV-)</span>
               <label className="toggle-switch">
                 <input
@@ -267,9 +306,9 @@ function App() {
               </label>
             </div>
           )}
-          {(config?.MeasurementValues === "both" || config?.MeasurementValues === "current") && (
+          {config && (config.MeasurementValues === "both" || config.MeasurementValues === "current") && (
             <div className="data-series-option">
-              <div className="color-dot" style={{ backgroundColor: 'blue' }}></div>
+              <div className="color-dot" style={{ backgroundColor: currentPosColor }}></div>
               <span>Current (A+)</span>
               <label className="toggle-switch">
                 <input
@@ -281,9 +320,9 @@ function App() {
               </label>
             </div>
           )}
-          {config && config.Polarity === "bipolar" && (config?.MeasurementValues === "both" || config?.MeasurementValues === "current") && (
+          {config && config.Polarity === "bipolar" && (config.MeasurementValues === "both" || config.MeasurementValues === "current") && (
             <div className="data-series-option">
-              <div className="color-dot" style={{ backgroundColor: 'purple' }}></div>
+              <div className="color-dot" style={{ backgroundColor: currentNegColor }}></div>
               <span>Current (A-)</span>
               <label className="toggle-switch">
                 <input
@@ -296,7 +335,7 @@ function App() {
             </div>
           )}
 
-
+          
           <div className="radio-group" style={{ display: 'none' }}>
             <label>
               <input type="radio" name="display-toggle" value="on" defaultChecked /> On
