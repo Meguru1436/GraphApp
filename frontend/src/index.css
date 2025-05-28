@@ -21,7 +21,6 @@ body {
   max-width: 1200px; /* Omezení šířky hlavního obsahu */
 }
 
-/* Upravený layout pro container */
 .container {
   display: flex; /* Použijeme flexbox pro hlavní layout */
   gap: 20px;
@@ -43,6 +42,20 @@ body {
   height: 100%; /* Zajistí, že status-data-section se roztáhne na celou výšku */
 }
 
+/* Upravíme také výšku graph-placeholder, aby odpovídala flex kontextu */
+.graph-placeholder {
+  width: 100%;
+  flex-grow: 1; /* Graf vyplní zbývající vertikální prostor */
+  background-color: #1a1e24;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #61dafb;
+  font-size: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 400px; /* Původní výška jako minimální */
+}
 
 .card {
   background-color: #1a1e24; /* Tmavší pozadí pro karty */
@@ -80,7 +93,6 @@ body {
   height: 12px;
   border-radius: 50%;
   margin-right: 10px;
-  flex-shrink: 0; /* Zabrání zmenšování tečky */
 }
 
 .toggle-switch {
@@ -89,7 +101,6 @@ body {
   width: 40px;
   height: 20px;
   margin-left: auto;
-  flex-shrink: 0; /* Zabrání zmenšování přepínače */
 }
 
 .toggle-switch input {
@@ -158,4 +169,18 @@ input:checked + .slider:before {
 
 .radio-group input {
   margin-right: 5px;
+}
+
+/* Graph placeholder */
+.graph-placeholder {
+  width: 100%;
+  height: 400px; /* Pevná výška pro graf */
+  background-color: #1a1e24; /* Stejné pozadí jako karty */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #61dafb;
+  font-size: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
