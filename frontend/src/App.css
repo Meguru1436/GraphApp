@@ -1,0 +1,139 @@
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.App-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.App-header h1 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.config-display p {
+  margin: 8px 0;
+  padding: 5px 0;
+}
+
+.status-display p {
+  margin: 8px 0;
+  padding: 5px 0;
+}
+
+.measurements-section {
+  background-color: #ffffff;
+}
+
+.clear-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.clear-button:hover {
+  background-color: #c0392b;
+}
+
+.measurements-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.measurement-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.measurement-item h4 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.measurement-item small {
+  color: #6c757d;
+}
+
+.measured-values {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.value {
+  background-color: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.value:contains("+") {
+  background-color: #28a745;
+}
+
+.value:contains("-") {
+  background-color: #dc3545;
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #e74c3c;
+}
+
+.error h2 {
+  color: #e74c3c;
+}
+
+.error button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.error button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .measured-values {
+    flex-direction: column;
+  }
+}
