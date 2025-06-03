@@ -2,7 +2,6 @@ const express = require('express');
 const sqlite3 = require('sqlite3').verbose(); 
 const app = express();
 
-
 const db = new sqlite3.Database('./measurements.db', (err) => {
     if (err) {
         console.error('Error connecting to database:', err.message);
@@ -10,7 +9,6 @@ const db = new sqlite3.Database('./measurements.db', (err) => {
     }
     console.log('Connected to the SQLite database: measurements.db');
 });
-
 
 db.serialize(() => {
     db.run(`
@@ -49,7 +47,6 @@ db.serialize(() => {
         )
     `, (err) => {
         if (err) console.error('Error creating config table:', err.message);
-        // Vlož nebo aktualizuj výchozí konfiguraci, pokud tabulka config existuje
         db.run(`
             INSERT INTO config (id, min_voltage, max_voltage, min_current, max_current, polarity, measurement_values, buffer_size)
             VALUES (1, 100, 1000, 5, 20, 'bipolar', 'both', 25)
@@ -63,12 +60,10 @@ db.serialize(() => {
                buffer_size = EXCLUDED.buffer_size;
         `, (err) => {
             if (err) console.error('Error inserting/updating config:', err.message);
-            // Po inicializaci configu načti ho do proměnné config
             db.get("SELECT * FROM config WHERE id = 1", [], (err, row) => {
                 if (err) {
                     console.error('Error loading config from DB:', err.message);
                 } else if (row) {
-                    // Přemapování z DB názvů na JS objekty
                     config.MinVoltage = row.min_voltage;
                     config.MaxVoltage = row.max_voltage;
                     config.MinCurrent = row.min_current;
@@ -93,12 +88,13 @@ let config = {
     BufferSize: 0 
 };
 
-
 let lastPosVoltage = 0; 
 let lastPosCurrent = 0; 
 let lastNegVoltage = 0; 
 let lastNegCurrent = 0; 
 
+// Přidaná proměnná pro ID měření
+let measurementId = 1;
 
 db.get("SELECT * FROM config WHERE id = 1", [], (err, row) => {
     if (err) {
@@ -112,7 +108,6 @@ db.get("SELECT * FROM config WHERE id = 1", [], (err, row) => {
     }
 });
 
-
 let shouldGenerateNewData = false;
 let newDataTimer = 0;
 const newDataInterval = 3;
@@ -120,7 +115,6 @@ const newDataInterval = 3;
 function getRandomSmallAbsChange(maxAbsChange) {
     return (Math.random() * 2 - 1) * maxAbsChange;
 }
-
 
 app.get("/api", (req, res) => {
     res.json(config);
@@ -187,7 +181,6 @@ function generateMeasurement(polarity, measurementType) {
     };
 }
 
-
 app.get("/measurements", async (req, res) => {
     if (shouldGenerateNewData) {
         const newMeasurement = generateMeasurement(config.Polarity, config.MeasurementValues);
@@ -197,17 +190,20 @@ app.get("/measurements", async (req, res) => {
                 console.error('Error inserting new measurement:', err.message);
                 return res.status(500).json({ error: 'Database error' });
             }
-            const insertedMeasurementId = this.lastID; 
+            let insertedMeasurementId = this.lastID; 
 
-            const stmt = db.prepare('INSERT INTO measurement_values (measurement_id, pos_voltage, pos_current, neg_voltage, neg_current) VALUES (?, ?, ?, ?, ?)');
-            newMeasurement.measuredValues.forEach(value => {
+            console.log(newMeasurement.measuredValues.length);
+                newMeasurement.measuredValues.forEach(value => {
+                const stmt = db.prepare('INSERT INTO measurement_values (measurement_id, pos_voltage, pos_current, neg_voltage, neg_current) VALUES (?, ?, ?, ?, ?)'); 
                 stmt.run(insertedMeasurementId, value.posVoltage, value.posCurrent, value.negVoltage, value.negCurrent, (err) => {
                     if (err) {
                         console.error('Error inserting measurement value:', err.message);
                     }
                 });
+                 stmt.finalize(); 
+                 insertedMeasurementId = insertedMeasurementId +1;
             });
-            stmt.finalize(); 
+            
 
             shouldGenerateNewData = false;
         });
@@ -225,16 +221,19 @@ app.get("/measurements", async (req, res) => {
             mv.neg_current
         FROM measurements AS m
         JOIN measurement_values AS mv ON m.id = mv.measurement_id
+        WHERE m.id IN (
+            SELECT id FROM measurements 
+            ORDER BY timestamp DESC 
+            LIMIT ?
+        )
         ORDER BY m.timestamp DESC, mv.id ASC
-        LIMIT ?
     `, [limit], (err, rows) => {
         if (err) {
             console.error('Error fetching measurements from DB:', err.message);
             return res.status(500).json({ error: 'Database error' });
         }
 
-        const measuredStorage = [];
-        let currentMeasurement = null;
+        const groupedMeasurements = {};
         rows.forEach(row => {
             if (!groupedMeasurements[row.id]) {
                 groupedMeasurements[row.id] = {
@@ -250,9 +249,12 @@ app.get("/measurements", async (req, res) => {
                 negCurrent: row.neg_current
             });
         });
+
+
         const sortedKeys = Object.keys(groupedMeasurements).sort((a, b) => {
             return new Date(groupedMeasurements[b].timestamp) - new Date(groupedMeasurements[a].timestamp);
         });
+
         const finalMeasuredStorage = [];
         for (let i = 0; i < sortedKeys.length && finalMeasuredStorage.length < limit; i++) {
             finalMeasuredStorage.push(groupedMeasurements[sortedKeys[i]]);
@@ -261,7 +263,6 @@ app.get("/measurements", async (req, res) => {
         res.json({ measuredStorage: finalMeasuredStorage.reverse() }); 
     });
 });
-
 
 app.listen(5000, () => {
     console.log("Server is running on port 5000");
