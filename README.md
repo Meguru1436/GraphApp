@@ -1,0 +1,1 @@
+Postup k spuštění a funkčnosti grafu: nejprve zapneme backend, tedy půjdeme do složky net0.6 a najdeme aplikaci s názvem Vitave.Service.Northbound.Host a spustíme ji. Ve webovém prohlížeči si najdeme localhost:5000 a startneme pulse. K spuštění frontendu musíme otevřít VScode a zapnout frontend pomocí příkazu npm start.
