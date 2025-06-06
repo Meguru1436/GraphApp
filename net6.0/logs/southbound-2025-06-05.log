@@ -1,0 +1,1280 @@
+2025-06-05 21:32:34.014 [DEBUG] --------------------- Southbound started ---------------------
+2025-06-05 21:32:34.017 [INFO] Loading adapter: PEF.VIC. Library: Vitave.Service.Southbound.PEF.VIC, version: 3.5.4995.5461, created: 04.06.2025 19:20:16
+2025-06-05 21:32:34.019 [INFO] Loading adapter: PEF.PEN. Library: Vitave.Mock, version: 3.5.4995.6111, created: 04.06.2025 19:20:14
+2025-06-05 21:32:34.022 [INFO] Loading adapter: PEF.Measurement. Library: Vitave.Service.Southbound.PEF.Measurement, version: 3.5.3421.3422, created: 04.06.2025 19:20:16
+2025-06-05 21:32:34.170 [INFO] VICInterface:: running on Mock platform !!!
+2025-06-05 21:32:34.171 [DEBUG] PEF.VIC.Write: SetupProfileV1
+2025-06-05 21:32:34.171 [INFO] PEF.VIC.Write: ENGINE: SETUP profile: time [ns]: T1=2000, T2=2000, T3=2000, T4=2000, B=1, R=1, F=10
+2025-06-05 21:32:34.171 [INFO] PEF.VIC.Write: ENGINE: SETUP profile: VIC units: T1=200, T2=200, T3=200, T4=200, B=1, R=1, F=10
+2025-06-05 21:32:34.173 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:32:34.184 [INFO] LibInit:: Initialize return 1!
+2025-06-05 21:32:34.184 [INFO] LibInit:: Xilinx file load OK!
+2025-06-05 21:32:34.185 [INFO] LibInit:: Library version is 33686016 - 0x2020200
+2025-06-05 21:32:34.185 [INFO] LibInit:: HW version is 0x233
+2025-06-05 21:32:34.185 [INFO] LibInit:: Library version is LibVic 2.2.2, HW 2, FW 51
+2025-06-05 21:32:34.185 [INFO] LibInit:: ProfileVersion 2
+2025-06-05 21:32:34.232 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 3.
+2025-06-05 21:32:34.233 [ERROR] SerialAdapter::Communicate: SetMode: 1, 3
+2025-06-05 21:32:34.233 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:32:34.244 [DEBUG] PEF.VIC.Read: PSU status 0.
+2025-06-05 21:32:34.244 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 0, PWM_1 promiles 0.
+2025-06-05 21:32:34.245 [DEBUG] PEF.VIC.Read: aOCP: GPIO Pwm 0 0
+2025-06-05 21:32:34.245 [DEBUG] TotalStop changed: prev 65535, new 1
+2025-06-05 21:32:34.245 [DEBUG] PEF.VIC.Read: CAP 0x0; Status Charge.
+2025-06-05 21:32:34.245 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x4: stykac Off, zamek On
+2025-06-05 21:32:34.245 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x0, PSD 0x0: ready No, SepareStykac No, PSU No, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:32:34.245 [DEBUG] PEF.VIC.Read: ENGINE: StartStop(x0042) 0xAB98; ErrStatus(x0000) 0x0
+2025-06-05 21:32:34.245 [DEBUG] PEF.VIC.Read: Marx temp: A 15,00 C, B 15,00 C
+2025-06-05 21:32:34.294 [DEBUG] PEF.VIC.Write: PSU: InitValue to value 0x0. Mbits 0x0
+2025-06-05 21:32:34.294 [DEBUG] PEF.VIC.Write: PSU: Set PWM promiles to zero. res = -3, res2 = -3
+2025-06-05 21:32:34.294 [INFO] PEF.VIC.Write: Initialize VIC ...
+2025-06-05 21:32:34.295 [DEBUG] PEF.VIC.Write: PSD set product type to VPG, PENPolarity=BIPOLAR
+2025-06-05 21:32:34.296 [DEBUG] PEF.VIC.Write: init VPG 0 1 1 0 0
+2025-06-05 21:32:34.296 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x4. DigOut 0x0
+2025-06-05 21:32:34.306 [DEBUG] PEF.VIC.Read: CAP Polarity from PSU UNIPOLAR
+2025-06-05 21:32:34.306 [INFO] PEF.VIC.Read: TotalStop: filtering 4 !!!
+2025-06-05 21:32:34.358 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x1000. DigOut 0x201
+2025-06-05 21:32:34.366 [INFO] PEF.VIC.Read: TotalStop: filtering 3 !!!
+2025-06-05 21:32:34.366 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x201, PSD 0x201: ready Yes, SepareStykac No, PSU No, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:32:34.412 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x0. DigOut 0x201
+2025-06-05 21:32:34.430 [INFO] PEF.VIC.Read: TotalStop: filtering 2 !!!
+2025-06-05 21:32:34.476 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x1000. DigOut 0x201
+2025-06-05 21:32:34.490 [INFO] PEF.VIC.Read: TotalStop: filtering 1 !!!
+2025-06-05 21:32:34.538 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x1000. DigOut 0x201
+2025-06-05 21:32:34.554 [INFO] PEF.VIC.Read: TotalStop: filtering 0 !!!
+2025-06-05 21:32:35.367 [DEBUG] PEF.Measurement: RESET NOW.
+2025-06-05 21:33:32.808 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=2000, T4=2000, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8000: Neg  
+ idx 3 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 4 tim 200 gti 0x4001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 5 tim 65535 gti 5 rpc 152 msk 0x0 st 0x0 
+ idx 6 tim 37880 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 7 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 8 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:33:32.808 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:33:32.866 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 3.
+2025-06-05 21:33:32.866 [ERROR] SerialAdapter::Communicate: SetMode: 1, 3
+2025-06-05 21:33:32.866 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:33:34.991 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x5. DigOut 0x301
+2025-06-05 21:33:35.055 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x5: stykac On, zamek On
+2025-06-05 21:33:35.055 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x301, PSD 0x301: ready Yes, SepareStykac No, PSU No, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:33:35.059 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=2000, T4=2000, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8000: Neg  
+ idx 3 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 4 tim 200 gti 0x4001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 5 tim 65535 gti 5 rpc 152 msk 0x0 st 0x0 
+ idx 6 tim 37880 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 7 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 8 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:33:35.059 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:33:35.059 [DEBUG] PEF.VIC.Write: PSU: ON module on 1 promiles, 1 V
+2025-06-05 21:33:35.059 [DEBUG] PEF.VIC.Write: PSU: Adapter.ActualVoltage = 1. res = 0, res2 = 0
+2025-06-05 21:33:35.059 [INFO] Set Mux Mode::NORMAL !!
+2025-06-05 21:33:35.118 [DEBUG] PEF.VIC.Read: PSU status 1.
+2025-06-05 21:33:35.118 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 1, PWM_1 promiles 1.
+2025-06-05 21:33:35.119 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:33:35.119 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 3.
+2025-06-05 21:33:35.119 [ERROR] SerialAdapter::Communicate: SetMode: 1, 3
+2025-06-05 21:33:35.119 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:33:35.180 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:33:35.180 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:33:35.367 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 11 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:35.427 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 11, PWM_1 promiles 11.
+2025-06-05 21:33:35.616 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 22 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:35.677 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 22, PWM_1 promiles 22.
+2025-06-05 21:33:35.867 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 33 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:35.927 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 33, PWM_1 promiles 33.
+2025-06-05 21:33:36.118 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 44 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:36.178 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 44, PWM_1 promiles 44.
+2025-06-05 21:33:36.368 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 55 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:36.427 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 55, PWM_1 promiles 55.
+2025-06-05 21:33:36.617 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 66 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:36.677 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 66, PWM_1 promiles 66.
+2025-06-05 21:33:36.866 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 77 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:36.931 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 77, PWM_1 promiles 77.
+2025-06-05 21:33:37.117 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 88 promiles (), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:37.178 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 88, PWM_1 promiles 88.
+2025-06-05 21:33:37.178 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 99 promiles (99), 500 V. res = 0, res2 = 0
+2025-06-05 21:33:37.242 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 99, PWM_1 promiles 99.
+2025-06-05 21:33:37.681 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:33:37.681 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:33:37.803 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:33:37.803 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 14. noOfPulses=1, polarity=3
+2025-06-05 21:33:37.803 [DEBUG] PEF.Measurement: ReadBatchResult response 14: 0x2F, 0x0, 6, 0.
+2025-06-05 21:33:37.803 [DEBUG] PEF.Measurement: received buffer: 200, 14,  2F 00 06 00 00 00 29 F8 86 FF 00 00 00 80.
+2025-06-05 21:33:37.804 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:33:37.866 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:33:37.866 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:33:37.876 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:33:37.927 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:33:37.927 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:33:42.806 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:33:42.806 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:33:42.930 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:33:42.930 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 14. noOfPulses=1, polarity=3
+2025-06-05 21:33:42.930 [DEBUG] PEF.Measurement: ReadBatchResult response 14: 0x2F, 0x0, 6, 0.
+2025-06-05 21:33:42.930 [DEBUG] PEF.Measurement: received buffer: 200, 14,  2F 00 06 00 00 00 21 F8 8E FF 00 00 00 80.
+2025-06-05 21:33:42.930 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:33:42.992 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:33:42.992 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:33:42.995 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:33:43.055 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:33:43.055 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:16.554 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:34:16.554 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:34:16.679 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:34:16.679 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 14. noOfPulses=1, polarity=3
+2025-06-05 21:34:16.679 [DEBUG] PEF.Measurement: ReadBatchResult response 14: 0x2F, 0x0, 6, 0.
+2025-06-05 21:34:16.679 [DEBUG] PEF.Measurement: received buffer: 200, 14,  2F 00 06 00 00 00 52 F8 8C FF 00 00 00 80.
+2025-06-05 21:34:16.679 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:34:16.740 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:34:16.740 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:16.744 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:34:16.804 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:34:16.804 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:29.461 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:34:29.461 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:34:29.584 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 14. noOfPulses=1, polarity=3
+2025-06-05 21:34:29.585 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:34:29.585 [DEBUG] PEF.Measurement: ReadBatchResult response 14: 0x2F, 0x0, 6, 0.
+2025-06-05 21:34:29.585 [DEBUG] PEF.Measurement: received buffer: 200, 14,  2F 00 06 00 00 00 7C F8 86 FF 00 00 00 80.
+2025-06-05 21:34:29.585 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:34:29.600 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:34:29.600 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:29.653 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:34:29.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:34:29.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:31.210 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:34:31.210 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:34:31.334 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:34:31.334 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 14. noOfPulses=1, polarity=3
+2025-06-05 21:34:31.334 [DEBUG] PEF.Measurement: ReadBatchResult response 14: 0x2F, 0x0, 6, 0.
+2025-06-05 21:34:31.334 [DEBUG] PEF.Measurement: received buffer: 200, 14,  2F 00 06 00 00 00 82 F8 87 FF 00 00 00 80.
+2025-06-05 21:34:31.334 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:34:31.396 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:34:31.396 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:31.399 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:34:31.399 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:34:31.399 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:34:31.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:34:31.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:31.522 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:34:31.522 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 14. noOfPulses=1, polarity=3
+2025-06-05 21:34:31.522 [DEBUG] PEF.Measurement: ReadBatchResult response 14: 0x2F, 0x0, 6, 0.
+2025-06-05 21:34:31.522 [DEBUG] PEF.Measurement: received buffer: 200, 14,  2F 00 06 00 00 00 2E F8 8C FF 00 00 00 80.
+2025-06-05 21:34:31.522 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:34:31.583 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:34:31.583 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:31.587 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:34:31.647 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:34:31.647 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:34:33.257 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:33.257 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:33.319 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 1.
+2025-06-05 21:34:33.319 [ERROR] SerialAdapter::Communicate: SetMode: 1, 1
+2025-06-05 21:34:33.319 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:36.132 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=0, T2=0, T3=2000, T4=2000, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 2 tim 200 gti 0x4001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:36.132 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:36.193 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 2.
+2025-06-05 21:34:36.193 [ERROR] SerialAdapter::Communicate: SetMode: 1, 2
+2025-06-05 21:34:36.193 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:43.352 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:43.352 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:43.413 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 1.
+2025-06-05 21:34:43.413 [ERROR] SerialAdapter::Communicate: SetMode: 1, 1
+2025-06-05 21:34:43.413 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:44.039 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=2000, T4=2000, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8000: Neg  
+ idx 3 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 4 tim 200 gti 0x4001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 5 tim 65535 gti 5 rpc 152 msk 0x0 st 0x0 
+ idx 6 tim 37880 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 7 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 8 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:44.039 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:44.102 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 3.
+2025-06-05 21:34:44.102 [ERROR] SerialAdapter::Communicate: SetMode: 1, 3
+2025-06-05 21:34:44.102 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:44.539 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:44.539 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:44.600 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 1.
+2025-06-05 21:34:44.600 [ERROR] SerialAdapter::Communicate: SetMode: 1, 1
+2025-06-05 21:34:44.600 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:45.101 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=0, T2=0, T3=2000, T4=2000, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 2 tim 200 gti 0x4001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:45.101 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:45.164 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 2.
+2025-06-05 21:34:45.164 [ERROR] SerialAdapter::Communicate: SetMode: 1, 2
+2025-06-05 21:34:45.164 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:45.539 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:45.539 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:45.599 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 1.
+2025-06-05 21:34:45.599 [ERROR] SerialAdapter::Communicate: SetMode: 1, 1
+2025-06-05 21:34:45.599 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:45.976 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=2000, T4=2000, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8000: Neg  
+ idx 3 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 4 tim 200 gti 0x4001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 5 tim 65535 gti 5 rpc 152 msk 0x0 st 0x0 
+ idx 6 tim 37880 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 7 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 8 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:45.976 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:46.038 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 3.
+2025-06-05 21:34:46.038 [ERROR] SerialAdapter::Communicate: SetMode: 1, 3
+2025-06-05 21:34:46.038 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:50.911 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=0, T2=0, T3=2000, T4=2000, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 2 tim 200 gti 0x4001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:50.911 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:50.975 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 2.
+2025-06-05 21:34:50.975 [ERROR] SerialAdapter::Communicate: SetMode: 1, 2
+2025-06-05 21:34:50.975 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:51.461 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=1, R=1, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:51.461 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:51.522 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 1, polarity 1.
+2025-06-05 21:34:51.522 [ERROR] SerialAdapter::Communicate: SetMode: 1, 1
+2025-06-05 21:34:51.522 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:56.788 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=1, R=2, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 38280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:56.788 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:56.849 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 2, polarity 1.
+2025-06-05 21:34:56.849 [ERROR] SerialAdapter::Communicate: SetMode: 2, 1
+2025-06-05 21:34:56.849 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:34:58.586 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=2, R=2, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 2 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 37880 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:34:58.586 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:34:58.648 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 4, polarity 1.
+2025-06-05 21:34:58.648 [ERROR] SerialAdapter::Communicate: SetMode: 4, 1
+2025-06-05 21:34:58.648 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:35:00.585 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:00.585 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:00.711 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:00.711 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 22. noOfPulses=4, polarity=1
+2025-06-05 21:35:00.711 [DEBUG] PEF.Measurement: ReadBatchResult response 22: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:00.711 [DEBUG] PEF.Measurement: received buffer: 200, 22,  2F 00 06 00 00 00 18 F8 8E FF 00 00 00 80 77 F8 79 FF 00 00 00 80.
+2025-06-05 21:35:00.711 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:00.741 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:00.741 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:00.776 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:00.805 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:00.805 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:07.756 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=41, R=2, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 41 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 22280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:35:07.756 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:35:07.818 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 82, polarity 1.
+2025-06-05 21:35:07.818 [ERROR] SerialAdapter::Communicate: SetMode: 82, 1
+2025-06-05 21:35:07.818 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:35:12.602 [DEBUG] PEF.VIC.Write: ENGINE: External Trigger ON ...
+2025-06-05 21:35:12.602 [WARN] PEF.VIC.Write: ENGINE: External Trigger: regValue 0x0,  RogowskiMode 0x0,  newValue 0x1
+2025-06-05 21:35:12.664 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=41, R=2, F=4, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 41 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 381 msk 0x0 st 0x0 
+ idx 4 tim 14765 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:35:12.664 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:35:12.664 [DEBUG] PEF.VIC.Write: Setup profile procedure - Start  !!!
+2025-06-05 21:35:12.724 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 82, polarity 1.
+2025-06-05 21:35:12.724 [ERROR] SerialAdapter::Communicate: SetMode: 82, 1
+2025-06-05 21:35:12.724 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:35:15.475 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=0, T4=0, B=41, R=2, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8001-1 rpc 41 msk 0xF st 0x0 - Disabled Rogowski: 0x8001: Neg  
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 22280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:35:15.475 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:35:15.475 [DEBUG] PEF.VIC.Write: Setup profile procedure - Start  !!!
+2025-06-05 21:35:15.475 [DEBUG] PEF.VIC.Write: ENGINE: External Trigger OFF ...
+2025-06-05 21:35:15.475 [WARN] PEF.VIC.Write: ENGINE: External Trigger: regValue 0x1,  RogowskiMode 0x0,  newValue 0x0
+2025-06-05 21:35:15.538 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 82, polarity 1.
+2025-06-05 21:35:15.538 [ERROR] SerialAdapter::Communicate: SetMode: 82, 1
+2025-06-05 21:35:15.538 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:35:19.210 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:19.210 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:19.336 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:19.336 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:19.336 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 45 F8 88 FF 00 00 00 80 4E F8 75 FF 00 00 00 80 AE F7 81 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:19.336 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:19.336 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:19.369 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:19.369 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:19.402 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:19.431 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:19.431 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:20.961 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:20.961 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:21.087 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:21.087 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:21.087 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 3C F8 8F FF 00 00 00 80 80 F8 71 FF 00 00 00 80 B8 F7 84 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:21.087 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:21.087 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:21.117 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:21.117 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:21.151 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:21.180 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:21.180 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:21.585 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:21.585 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:21.708 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:21.708 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:21.708 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:21.708 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 6E F8 91 FF 00 00 00 80 2A F8 74 FF 00 00 00 80 E8 F7 7E FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:21.708 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:21.744 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:21.744 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:21.778 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:21.802 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:21.802 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:22.024 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:22.024 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:22.150 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:22.150 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:22.150 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:22.150 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 2C F8 87 FF 00 00 00 80 71 F8 73 FF 00 00 00 80 BA F7 86 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:22.150 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:22.165 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:22.165 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:22.214 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:22.224 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:22.224 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:22.396 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:22.396 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:22.521 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:22.521 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:22.521 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:22.521 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 3A F8 8D FF 00 00 00 80 21 F8 71 FF 00 00 00 80 12 F8 85 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:22.521 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:22.539 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:22.539 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:22.589 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:22.589 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:22.589 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:22.600 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:22.600 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:22.709 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:22.709 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:22.709 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:22.709 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 18 F8 86 FF 00 00 00 80 8D F8 7B FF 00 00 00 80 BF F7 88 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:22.709 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:22.725 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:22.725 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:22.775 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:22.789 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:22.789 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:22.896 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:22.896 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:23.021 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:23.021 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:23.021 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 21 F8 87 FF 00 00 00 80 27 F8 79 FF 00 00 00 80 CA F7 87 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:23.021 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:23.021 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:23.038 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:23.038 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.089 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:23.089 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:23.089 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:23.100 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:23.100 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.211 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:23.211 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:23.211 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:23.211 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 46 F8 88 FF 00 00 00 80 5E F8 7A FF 00 00 00 80 F9 F7 7F FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:23.211 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:23.225 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:23.225 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.276 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:23.276 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:23.276 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:23.287 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:23.287 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.396 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:23.396 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:23.396 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 1E F8 8A FF 00 00 00 80 26 F8 73 FF 00 00 00 80 06 F8 83 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:23.396 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:23.396 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:23.413 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:23.413 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.464 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:23.464 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:23.464 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:23.474 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:23.474 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.584 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:23.584 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:23.584 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:23.584 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:23.584 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:23.584 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 7D F8 86 FF 00 00 00 80 81 F8 75 FF 00 00 00 80 0B F8 80 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:23.584 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:23.601 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:23.601 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.654 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:23.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:23.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.708 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:23.708 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:23.708 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:23.708 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 78 F8 89 FF 00 00 00 80 23 F8 71 FF 00 00 00 80 A6 F7 87 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:23.708 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:23.726 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:23.726 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.776 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:23.776 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:23.776 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:23.788 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:23.788 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.898 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:23.898 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:23.898 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:23.898 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 67 F8 88 FF 00 00 00 80 2F F8 77 FF 00 00 00 80 DC F7 84 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:23.898 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:23.912 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:23.912 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:23.964 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:23.964 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:23.964 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:23.974 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:23.974 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.084 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:24.084 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:24.084 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:24.084 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:24.084 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:24.084 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 2C F8 90 FF 00 00 00 80 1C F8 73 FF 00 00 00 80 C8 F7 7E FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:24.084 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:24.101 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:24.101 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.153 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:24.164 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:24.164 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.210 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:24.210 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:24.210 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:24.210 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 6A F8 91 FF 00 00 00 80 4B F8 73 FF 00 00 00 80 EA F7 81 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:24.210 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:24.225 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:24.225 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.277 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:24.277 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:24.277 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:24.287 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:24.287 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.396 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:24.396 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:24.396 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:24.396 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 68 F8 8B FF 00 00 00 80 79 F8 7B FF 00 00 00 80 A0 F7 85 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:24.396 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:24.414 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:24.414 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.463 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:24.463 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:24.463 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:24.477 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:24.477 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.585 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:24.585 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:24.585 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 54 F8 8D FF 00 00 00 80 1C F8 72 FF 00 00 00 80 E8 F7 80 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:24.585 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:24.585 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:24.599 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:24.599 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.653 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:24.653 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:24.653 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:24.663 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:24.663 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.772 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:24.772 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:24.772 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:24.772 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:24.772 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:24.772 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 17 F8 91 FF 00 00 00 80 36 F8 77 FF 00 00 00 80 B9 F7 84 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:24.772 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:24.787 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:24.787 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.842 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:24.852 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:24.852 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.898 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:24.898 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:24.898 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:24.898 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:24.898 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:24.898 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 67 F8 8E FF 00 00 00 80 34 F8 75 FF 00 00 00 80 AE F7 7F FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:24.898 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:24.913 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:24.913 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:24.966 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:24.977 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:24.977 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.022 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:25.022 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:25.022 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:25.022 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:25.022 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:25.022 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 7A F8 8F FF 00 00 00 80 81 F8 71 FF 00 00 00 80 FF F7 83 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:25.022 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:25.040 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:25.040 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.092 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:25.101 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:25.101 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.149 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:25.149 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:25.149 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:25.149 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:25.149 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:25.149 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 21 F8 87 FF 00 00 00 80 5B F8 71 FF 00 00 00 80 B4 F7 88 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:25.149 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:25.163 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:25.163 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.217 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:25.224 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:25.224 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.272 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:25.272 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:25.272 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:25.272 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:25.272 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:25.272 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 7C F8 8F FF 00 00 00 80 2F F8 79 FF 00 00 00 80 DE F7 82 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:25.272 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:25.286 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:25.286 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.342 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:25.352 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:25.352 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.399 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:25.399 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:25.399 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 16 F8 88 FF 00 00 00 80 24 F8 73 FF 00 00 00 80 B4 F7 83 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:25.399 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:25.399 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:25.412 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:25.412 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.465 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:25.465 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:25.465 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:25.477 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:25.477 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.583 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:25.583 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:25.583 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:25.583 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 23 F8 8D FF 00 00 00 80 8B F8 77 FF 00 00 00 80 CB F7 82 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:25.583 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:25.602 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:25.602 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.651 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:25.665 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:25.665 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.773 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:25.773 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:25.898 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:25.898 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:25.898 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 71 F8 8A FF 00 00 00 80 5A F8 70 FF 00 00 00 80 CC F7 82 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:25.898 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:25.898 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:25.912 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:25.912 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:25.964 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:25.964 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:25.964 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:25.977 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:25.977 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.083 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:26.083 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:26.083 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:26.083 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 1C F8 8D FF 00 00 00 80 6A F8 70 FF 00 00 00 80 C5 F7 82 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:26.083 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:26.100 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:26.100 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.150 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:26.150 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:26.150 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:26.163 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:26.163 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.274 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:26.274 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:26.274 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:26.274 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:26.274 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:26.274 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 43 F8 8E FF 00 00 00 80 79 F8 79 FF 00 00 00 80 AB F7 7F FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:26.274 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:26.288 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:26.288 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.343 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:26.350 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:26.350 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.397 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:26.397 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:26.397 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 3F F8 8F FF 00 00 00 80 59 F8 75 FF 00 00 00 80 DD F7 82 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:26.397 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:26.397 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:26.414 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:26.414 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.464 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:26.464 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:26.464 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:26.475 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:26.475 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.584 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:26.584 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:26.584 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:26.584 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:26.584 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:26.584 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 1A F8 91 FF 00 00 00 80 47 F8 72 FF 00 00 00 80 D3 F7 7D FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:26.584 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:26.601 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:26.601 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.654 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:26.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:26.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.714 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:26.714 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:26.714 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:26.714 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:26.714 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:26.714 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 47 F8 8F FF 00 00 00 80 54 F8 72 FF 00 00 00 80 0C F8 88 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:26.714 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:26.728 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:26.728 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.782 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:26.790 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:26.790 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.836 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:26.836 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:26.836 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 6F F8 87 FF 00 00 00 80 5E F8 73 FF 00 00 00 80 E2 F7 7E FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:26.836 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:26.836 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:26.836 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:26.836 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:26.855 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:26.855 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.907 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:26.914 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:26.914 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:26.961 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:26.961 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:26.961 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 54 F8 8F FF 00 00 00 80 6A F8 79 FF 00 00 00 80 F9 F7 82 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:26.961 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:26.961 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:26.961 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:26.961 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:26.978 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:26.978 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.031 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:27.038 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:27.038 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.086 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:27.086 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:27.086 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:27.086 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 3F F8 91 FF 00 00 00 80 86 F8 76 FF 00 00 00 80 C1 F7 84 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:27.086 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:27.099 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:27.099 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.152 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:27.162 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:27.162 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.212 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:27.212 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:27.334 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:27.334 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:27.334 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:27.334 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 25 F8 8C FF 00 00 00 80 46 F8 77 FF 00 00 00 80 9E F7 7F FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:27.334 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:27.351 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:27.351 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.399 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:27.414 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:27.414 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.459 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:27.459 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:27.585 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:27.585 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:27.585 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:27.585 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:27.585 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 5D F8 8B FF 00 00 00 80 86 F8 7A FF 00 00 00 80 EF F7 85 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:27.585 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:27.585 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:27.599 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:27.599 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.654 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:27.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:27.664 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.710 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:27.710 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:27.710 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:27.710 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 3A F8 8E FF 00 00 00 80 48 F8 71 FF 00 00 00 80 9B F7 80 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:27.710 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:27.725 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:27.725 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.778 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:27.778 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:27.778 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:27.788 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:27.788 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.902 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:27.902 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:27.902 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:27.902 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:27.902 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 3B F8 8E FF 00 00 00 80 4D F8 78 FF 00 00 00 80 F9 F7 80 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:27.902 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:27.902 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:27.961 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:27.961 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:27.969 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:28.024 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:28.024 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.024 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:28.024 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:28.024 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:28.024 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 73 F8 90 FF 00 00 00 80 39 F8 71 FF 00 00 00 80 CF F7 87 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:28.024 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:28.084 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:28.084 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.088 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:28.088 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:28.088 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:28.146 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:28.146 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.211 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:28.211 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:28.211 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:28.211 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:28.211 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:28.211 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 49 F8 90 FF 00 00 00 80 25 F8 71 FF 00 00 00 80 CD F7 7F FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:28.211 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:28.272 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:28.272 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.278 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:28.336 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:28.336 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.337 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:28.337 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:28.337 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:28.337 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 7E F8 8F FF 00 00 00 80 41 F8 77 FF 00 00 00 80 F0 F7 80 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:28.337 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:28.397 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:28.397 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.401 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:28.401 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:28.401 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:28.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:28.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.523 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:28.523 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:28.523 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:28.523 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 32 F8 90 FF 00 00 00 80 74 F8 72 FF 00 00 00 80 D4 F7 86 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:28.523 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:28.583 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:28.583 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.587 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:28.587 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:28.587 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:28.647 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:28.647 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.709 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:28.709 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:28.709 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:28.709 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:28.709 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:28.709 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 6E F8 90 FF 00 00 00 80 80 F8 78 FF 00 00 00 80 02 F8 7F FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:28.709 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:28.771 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:28.771 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.779 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:28.833 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:28.833 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.833 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:28.833 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:28.833 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:28.833 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 2C F8 87 FF 00 00 00 80 2D F8 75 FF 00 00 00 80 A9 F7 84 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:28.833 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:28.896 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:28.896 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:28.900 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:28.900 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:28.900 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:28.960 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:28.960 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.021 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:29.021 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:29.021 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:29.021 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 36 F8 8B FF 00 00 00 80 28 F8 76 FF 00 00 00 80 D7 F7 7D FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:29.021 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:29.086 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:29.086 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.089 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:29.089 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:29.089 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:29.147 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:29.147 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.209 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:29.209 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:29.209 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:29.209 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:29.209 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:29.209 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 12 F8 8D FF 00 00 00 80 3B F8 78 FF 00 00 00 80 E4 F7 7E FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:29.209 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:29.274 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:29.274 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.281 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:29.336 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:29.336 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.336 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:29.336 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:29.336 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 17 F8 8F FF 00 00 00 80 4E F8 7B FF 00 00 00 80 00 F8 87 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:29.336 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:29.336 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:29.397 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:29.397 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.401 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:29.401 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:29.401 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:29.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:29.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.522 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:29.522 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:29.522 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:29.522 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:29.522 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:29.522 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 6B F8 89 FF 00 00 00 80 6F F8 77 FF 00 00 00 80 A6 F7 87 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:29.522 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:29.586 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:29.586 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.593 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:29.648 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:29.648 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.648 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:29.648 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:29.648 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:29.648 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 82 F8 8B FF 00 00 00 80 1E F8 78 FF 00 00 00 80 AA F7 7E FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:29.648 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:29.710 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:29.710 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.713 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:29.713 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:29.713 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:29.771 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:29.771 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.834 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:29.834 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:29.834 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:29.834 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:29.834 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:29.834 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 40 F8 8C FF 00 00 00 80 84 F8 7A FF 00 00 00 80 C2 F7 82 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:29.834 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:29.898 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:29.898 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.905 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:29.959 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:29.959 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:29.959 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:29.959 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:29.959 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:29.959 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 24 F8 88 FF 00 00 00 80 4F F8 71 FF 00 00 00 80 A0 F7 81 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:29.959 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:30.023 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:30.023 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.027 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:30.027 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:30.027 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:30.083 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:30.083 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.148 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:30.148 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:30.148 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:30.148 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 31 F8 87 FF 00 00 00 80 61 F8 70 FF 00 00 00 80 C8 F7 86 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:30.148 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:30.209 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:30.209 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.213 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:30.213 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:30.213 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:30.272 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:30.272 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.333 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:30.333 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:30.333 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:30.333 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:30.333 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:30.333 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 5F F8 89 FF 00 00 00 80 60 F8 7B FF 00 00 00 80 00 F8 7F FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:30.333 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:30.397 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:30.397 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.404 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:30.459 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:30.459 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.459 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:30.459 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:30.459 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:30.459 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:30.459 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:30.459 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 65 F8 8E FF 00 00 00 80 45 F8 75 FF 00 00 00 80 CF F7 80 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:30.459 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:30.523 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:30.523 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.530 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:30.585 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:30.585 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.585 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:30.585 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:30.585 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:30.585 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 5A F8 8A FF 00 00 00 80 59 F8 77 FF 00 00 00 80 EF F7 80 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:30.585 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:30.646 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:30.646 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.649 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:30.649 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:30.649 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:30.712 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:30.712 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.772 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:30.772 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:30.772 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:30.772 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:30.772 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:30.772 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 53 F8 88 FF 00 00 00 80 33 F8 74 FF 00 00 00 80 CC F7 7E FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:30.772 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:30.834 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:30.834 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.842 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:30.898 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:30.898 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.898 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:30.898 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:30.898 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:30.898 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:30.898 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:30.898 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 45 F8 87 FF 00 00 00 80 84 F8 70 FF 00 00 00 80 9C F7 7E FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:30.898 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:30.960 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:30.960 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:30.967 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:31.021 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:31.021 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.021 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:31.021 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:31.021 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:31.021 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 73 F8 88 FF 00 00 00 80 77 F8 78 FF 00 00 00 80 B2 F7 85 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:31.021 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:31.083 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:31.084 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.087 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:31.087 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:31.087 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:31.148 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:31.148 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.211 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:31.211 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:31.211 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:31.211 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 4B F8 88 FF 00 00 00 80 46 F8 76 FF 00 00 00 80 9C F7 86 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:31.211 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:31.272 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:31.272 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.276 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:31.276 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:31.276 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:31.334 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:31.334 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.397 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:31.397 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:31.397 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:31.397 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:31.397 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:31.397 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 65 F8 8F FF 00 00 00 80 58 F8 71 FF 00 00 00 80 C8 F7 83 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:31.397 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:31.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:31.461 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.469 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:31.522 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:31.522 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.522 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:31.522 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:31.522 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:31.522 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 3A F8 8D FF 00 00 00 80 39 F8 7A FF 00 00 00 80 0E F8 83 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:31.522 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:31.584 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:31.584 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:31.588 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:31.649 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:31.649 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:35.069 [INFO] Set Mux Mode::NORMAL !!
+2025-06-05 21:35:35.193 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 109 promiles (), 553 V. res = 0, res2 = 0
+2025-06-05 21:35:35.210 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 109, PWM_1 promiles 109.
+2025-06-05 21:35:35.319 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 119 promiles (), 606 V. res = 0, res2 = 0
+2025-06-05 21:35:35.335 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 119, PWM_1 promiles 119.
+2025-06-05 21:35:35.444 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 129 promiles (), 659 V. res = 0, res2 = 0
+2025-06-05 21:35:35.458 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 129, PWM_1 promiles 129.
+2025-06-05 21:35:35.568 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 139 promiles (), 712 V. res = 0, res2 = 0
+2025-06-05 21:35:35.584 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 139, PWM_1 promiles 139.
+2025-06-05 21:35:35.694 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 149 promiles (), 765 V. res = 0, res2 = 0
+2025-06-05 21:35:35.711 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 149, PWM_1 promiles 149.
+2025-06-05 21:35:35.820 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 159 promiles (), 818 V. res = 0, res2 = 0
+2025-06-05 21:35:35.837 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 159, PWM_1 promiles 159.
+2025-06-05 21:35:35.944 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 169 promiles (), 871 V. res = 0, res2 = 0
+2025-06-05 21:35:35.960 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 169, PWM_1 promiles 169.
+2025-06-05 21:35:36.069 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 179 promiles (), 924 V. res = 0, res2 = 0
+2025-06-05 21:35:36.086 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 179, PWM_1 promiles 179.
+2025-06-05 21:35:36.194 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 189 promiles (), 977 V. res = 0, res2 = 0
+2025-06-05 21:35:36.211 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 189, PWM_1 promiles 189.
+2025-06-05 21:35:36.320 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 199 promiles (), 1030 V. res = 0, res2 = 0
+2025-06-05 21:35:36.333 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 199, PWM_1 promiles 199.
+2025-06-05 21:35:36.446 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 209 promiles (), 1083 V. res = 0, res2 = 0
+2025-06-05 21:35:36.459 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 209, PWM_1 promiles 209.
+2025-06-05 21:35:36.569 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 219 promiles (), 1136 V. res = 0, res2 = 0
+2025-06-05 21:35:36.585 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 219, PWM_1 promiles 219.
+2025-06-05 21:35:36.696 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 229 promiles (), 1189 V. res = 0, res2 = 0
+2025-06-05 21:35:36.709 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 229, PWM_1 promiles 229.
+2025-06-05 21:35:36.820 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 239 promiles (), 1242 V. res = 0, res2 = 0
+2025-06-05 21:35:36.834 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 239, PWM_1 promiles 239.
+2025-06-05 21:35:36.944 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 249 promiles (), 1295 V. res = 0, res2 = 0
+2025-06-05 21:35:36.961 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 249, PWM_1 promiles 249.
+2025-06-05 21:35:37.069 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 259 promiles (), 1348 V. res = 0, res2 = 0
+2025-06-05 21:35:37.086 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 259, PWM_1 promiles 259.
+2025-06-05 21:35:37.134 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 396 promiles (396), 2000 V. res = 0, res2 = 0
+2025-06-05 21:35:37.148 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 396, PWM_1 promiles 396.
+2025-06-05 21:35:37.633 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:37.633 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:37.758 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:37.758 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:37.758 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:37.758 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 62 F8 89 FF 00 00 00 80 6D F8 72 FF 00 00 00 80 A7 F7 81 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:37.758 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:37.772 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:37.772 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:37.824 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:37.835 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:37.835 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:39.383 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:35:39.383 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:35:39.506 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:35:39.506 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 334. noOfPulses=82, polarity=1
+2025-06-05 21:35:39.506 [DEBUG] PEF.Measurement: ReadBatchResult response 334: 0x2F, 0x0, 6, 0.
+2025-06-05 21:35:39.506 [DEBUG] PEF.Measurement: received buffer: 200, 334,  2F 00 06 00 00 00 6C F8 90 FF 00 00 00 80 88 F8 76 FF 00 00 00 80 03 F8 81 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:35:39.506 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:35:39.570 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:35:39.570 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:35:39.574 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:35:39.632 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:35:39.632 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:36:45.850 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=0, T2=0, T3=2000, T4=2000, B=41, R=2, F=10, FBI=1
+ idx 1 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 2 tim 200 gti 0x4001-1 rpc 41 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 3 tim 65535 gti 3 rpc 152 msk 0x0 st 0x0 
+ idx 4 tim 22280 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 5 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 6 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:36:45.850 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:36:45.913 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 82, polarity 2.
+2025-06-05 21:36:45.913 [ERROR] SerialAdapter::Communicate: SetMode: 82, 2
+2025-06-05 21:36:45.913 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:36:48.399 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=2000, T4=2000, B=41, R=2, F=10, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8000: Neg  
+ idx 3 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 4 tim 200 gti 0x4001-1 rpc 41 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 5 tim 65535 gti 5 rpc 152 msk 0x0 st 0x0 
+ idx 6 tim 5880 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 7 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 8 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:36:48.399 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:36:48.461 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 82, polarity 3.
+2025-06-05 21:36:48.461 [ERROR] SerialAdapter::Communicate: SetMode: 82, 3
+2025-06-05 21:36:48.461 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:37:07.616 [DEBUG] PEF.VIC.Write: ENGINE: STOP ...
+2025-06-05 21:37:07.616 [DEBUG] PEF.VIC.Write: ENGINE: Command STOP executed successfully!
+2025-06-05 21:37:07.616 [DEBUG] PEF.VIC.Write: PSU: OFF module
+2025-06-05 21:37:07.616 [DEBUG] PEF.VIC.Write: PSU: Adapter.ActualVoltage = 0. res = 0, res2 = 0
+2025-06-05 21:37:07.633 [DEBUG] PEF.VIC.Read: PSU status 0.
+2025-06-05 21:37:07.633 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 0, PWM_1 promiles 0.
+2025-06-05 21:37:07.794 [DEBUG] PEF.VIC.Write: PSU: OFF module
+2025-06-05 21:37:07.794 [DEBUG] PEF.VIC.Write: PSU: Adapter.ActualVoltage = 0. res = 0, res2 = 0
+2025-06-05 21:37:07.794 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x4. DigOut 0x201
+2025-06-05 21:37:07.809 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x4: stykac Off, zamek On
+2025-06-05 21:37:07.809 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x201, PSD 0x201: ready Yes, SepareStykac No, PSU No, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:37:07.914 [DEBUG] PEF.VIC.Write: ENGINE: STOP ...
+2025-06-05 21:37:07.914 [DEBUG] PEF.VIC.Write: ENGINE: Command STOP executed successfully!
+2025-06-05 21:37:08.039 [DEBUG] PEF.VIC.Write: CAP: sensor ChargeDischarge to value 0xF, write 0x209.
+2025-06-05 21:37:08.039 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x14. DigOut 0x209
+2025-06-05 21:37:08.053 [DEBUG] PEF.VIC.Read: CAP 0xF; Status Discharge.
+2025-06-05 21:37:08.053 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x14: stykac Off, zamek On
+2025-06-05 21:37:08.053 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x209, PSD 0x601: ready Yes, SepareStykac No, PSU No, Engine Stop, CAP Discharging, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:37:09.382 [DEBUG] PEF.VIC.Write: ENGINE: STOP ...
+2025-06-05 21:37:09.382 [DEBUG] PEF.VIC.Write: ENGINE: Command STOP executed successfully!
+2025-06-05 21:37:09.819 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x10. DigOut 0x209
+2025-06-05 21:37:10.555 [DEBUG] PEF.VIC.Write: ENGINE: STOP ...
+2025-06-05 21:37:10.555 [DEBUG] PEF.VIC.Write: ENGINE: Command STOP executed successfully!
+2025-06-05 21:37:10.804 [DEBUG] PEF.VIC.Write: ENGINE: STOP ...
+2025-06-05 21:37:10.804 [DEBUG] PEF.VIC.Write: ENGINE: Command STOP executed successfully!
+2025-06-05 21:37:10.931 [DEBUG] PEF.VIC.Write: ENGINE: STOP ...
+2025-06-05 21:37:10.931 [DEBUG] PEF.VIC.Write: ENGINE: Command STOP executed successfully!
+2025-06-05 21:37:11.116 [DEBUG] PEF.VIC.Write: ENGINE: STOP ...
+2025-06-05 21:37:11.116 [DEBUG] PEF.VIC.Write: ENGINE: Command STOP executed successfully!
+2025-06-05 21:37:16.084 [DEBUG] PEF.VIC.Write: CAP: sensor Initialize to value 0x0, write 0x201.
+2025-06-05 21:37:16.084 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x4. DigOut 0x201
+2025-06-05 21:37:16.133 [DEBUG] PEF.VIC.Read: CAP 0x0; Status Charge.
+2025-06-05 21:37:16.133 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x4: stykac Off, zamek On
+2025-06-05 21:37:16.133 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x201, PSD 0x201: ready Yes, SepareStykac No, PSU No, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:37:32.883 [DEBUG] PEF.VIC.Write: SetupProfileV2 ConvertedProfile: T1=2000, T2=2000, T3=2000, T4=2000, B=41, R=2, F=55, FBI=1
+ idx 1 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x5 - Disabled Rogowski: 0x8000: Neg  
+ idx 2 tim 200 gti 0x8000-0 rpc 1 msk 0xF st 0x0 - Disabled Rogowski: 0x8000: Neg  
+ idx 3 tim 200 gti 0x4000-0 rpc 1 msk 0xF st 0xA - Disabled Rogowski: 0x4000: Pos 
+ idx 4 tim 200 gti 0x4001-1 rpc 41 msk 0xF st 0x0 - Disabled Rogowski: 0x4001: Pos 
+ idx 5 tim 65535 gti 5 rpc 27 msk 0x0 st 0x0 
+ idx 6 tim 15936 gti 1 rpc 1 msk 0x0 st 0x0 
+ idx 7 tim 0 gti 1 rpc 2 msk 0x0 st 0x0 
+ idx 8 tim 0 gti 0 rpc 0 msk 0x0 st 0x0 
+
+2025-06-05 21:37:32.883 [DEBUG] PEF.VIC.Write: ENGINE: SET OK!!!
+2025-06-05 21:37:32.946 [DEBUG] PEF.Measurement: SetMode: mode 1, noOfPulses 82, polarity 3.
+2025-06-05 21:37:32.946 [ERROR] SerialAdapter::Communicate: SetMode: 82, 3
+2025-06-05 21:37:32.946 [DEBUG] PEF.Measurement: SetMode response 2: 0x2, 0x0.
+2025-06-05 21:37:34.945 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x5. DigOut 0x301
+2025-06-05 21:37:34.959 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x5: stykac On, zamek On
+2025-06-05 21:37:34.959 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x301, PSD 0x301: ready Yes, SepareStykac No, PSU No, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:37:35.005 [DEBUG] PEF.VIC.Write: PSU: ON module on 1 promiles, 1 V
+2025-06-05 21:37:35.006 [DEBUG] PEF.VIC.Write: PSU: Adapter.ActualVoltage = 1. res = 0, res2 = 0
+2025-06-05 21:37:35.006 [INFO] Set Mux Mode::NORMAL !!
+2025-06-05 21:37:35.024 [DEBUG] PEF.VIC.Read: PSU status 1.
+2025-06-05 21:37:35.024 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 1, PWM_1 promiles 1.
+2025-06-05 21:37:35.068 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:37:35.088 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:37:35.088 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:37:35.600 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 62 promiles (), 166 V. res = 0, res2 = 0
+2025-06-05 21:37:35.636 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 62, PWM_1 promiles 62.
+2025-06-05 21:37:36.165 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 74 promiles (), 332 V. res = 0, res2 = 0
+2025-06-05 21:37:36.196 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 74, PWM_1 promiles 74.
+2025-06-05 21:37:36.726 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 86 promiles (), 498 V. res = 0, res2 = 0
+2025-06-05 21:37:36.756 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 86, PWM_1 promiles 86.
+2025-06-05 21:37:37.100 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 99 promiles (99), 500 V. res = 0, res2 = 0
+2025-06-05 21:37:37.131 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 99, PWM_1 promiles 99.
+2025-06-05 21:37:37.349 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 109 promiles (), 553 V. res = 0, res2 = 0
+2025-06-05 21:37:37.384 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 109, PWM_1 promiles 109.
+2025-06-05 21:37:37.477 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 119 promiles (), 606 V. res = 0, res2 = 0
+2025-06-05 21:37:37.507 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 119, PWM_1 promiles 119.
+2025-06-05 21:37:37.599 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 129 promiles (), 659 V. res = 0, res2 = 0
+2025-06-05 21:37:37.633 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 129, PWM_1 promiles 129.
+2025-06-05 21:37:37.726 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 139 promiles (), 712 V. res = 0, res2 = 0
+2025-06-05 21:37:37.757 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 139, PWM_1 promiles 139.
+2025-06-05 21:37:37.849 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 149 promiles (), 765 V. res = 0, res2 = 0
+2025-06-05 21:37:37.883 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 149, PWM_1 promiles 149.
+2025-06-05 21:37:37.975 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 159 promiles (), 818 V. res = 0, res2 = 0
+2025-06-05 21:37:38.005 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 159, PWM_1 promiles 159.
+2025-06-05 21:37:38.099 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 169 promiles (), 871 V. res = 0, res2 = 0
+2025-06-05 21:37:38.132 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 169, PWM_1 promiles 169.
+2025-06-05 21:37:38.224 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 179 promiles (), 924 V. res = 0, res2 = 0
+2025-06-05 21:37:38.255 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 179, PWM_1 promiles 179.
+2025-06-05 21:37:38.350 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 189 promiles (), 977 V. res = 0, res2 = 0
+2025-06-05 21:37:38.380 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 189, PWM_1 promiles 189.
+2025-06-05 21:37:38.477 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 199 promiles (), 1030 V. res = 0, res2 = 0
+2025-06-05 21:37:38.507 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 199, PWM_1 promiles 199.
+2025-06-05 21:37:38.600 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 209 promiles (), 1083 V. res = 0, res2 = 0
+2025-06-05 21:37:38.630 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 209, PWM_1 promiles 209.
+2025-06-05 21:37:38.726 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 219 promiles (), 1136 V. res = 0, res2 = 0
+2025-06-05 21:37:38.756 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 219, PWM_1 promiles 219.
+2025-06-05 21:37:38.851 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 229 promiles (), 1189 V. res = 0, res2 = 0
+2025-06-05 21:37:38.881 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 229, PWM_1 promiles 229.
+2025-06-05 21:37:38.976 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 239 promiles (), 1242 V. res = 0, res2 = 0
+2025-06-05 21:37:39.005 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 239, PWM_1 promiles 239.
+2025-06-05 21:37:39.103 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 249 promiles (), 1295 V. res = 0, res2 = 0
+2025-06-05 21:37:39.134 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 249, PWM_1 promiles 249.
+2025-06-05 21:37:39.226 [DEBUG] PEF.VIC.Write: PSU:  SetVoltage on 396 promiles (396), 2000 V. res = 0, res2 = 0
+2025-06-05 21:37:39.257 [DEBUG] PEF.VIC.Read: PSU: PWM_0 promiles 396, PWM_1 promiles 396.
+2025-06-05 21:37:42.164 [DEBUG] PEF.VIC.Write: ENGINE: START... 
+2025-06-05 21:37:42.164 [DEBUG] PEF.VIC.Write: ENGINE: Command START executed successfully!
+2025-06-05 21:37:42.289 [DEBUG] PEF.Measurement: ReadBatchResult - expected response size 662. noOfPulses=82, polarity=3
+2025-06-05 21:37:42.289 [DEBUG] PEF.VIC.Write: PSD: settings to value 0xC5. DigOut 0x307
+2025-06-05 21:37:42.289 [DEBUG] PEF.Measurement: ReadBatchResult response 662: 0x2F, 0x0, 6, 0.
+2025-06-05 21:37:42.289 [DEBUG] PEF.Measurement: received buffer: 200, 662,  2F 00 06 00 00 00 69 F8 91 FF 00 00 00 80 7A F8 73 FF 00 00 00 80 A7 F7 85 FF 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+2025-06-05 21:37:42.289 [DEBUG] PEF.Measurement: successful. pos: 6 neg: 0
+2025-06-05 21:37:42.349 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0xC5: stykac On, zamek On
+2025-06-05 21:37:42.349 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x307, PSD 0x307: ready Yes, SepareStykac No, PSU Yes, Engine Running, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off
+2025-06-05 21:37:42.353 [DEBUG] PEF.VIC.Write: PSD: settings to value 0x45. DigOut 0x303
+2025-06-05 21:37:42.413 [DEBUG] PEF.VIC.Read: DISTRIBUTION: Sensor 0x45: stykac On, zamek On
+2025-06-05 21:37:42.413 [DEBUG] PEF.VIC.Read: DISTRIBUTION: DigOut 0x303, PSD 0x303: ready Yes, SepareStykac No, PSU Yes, Engine Stop, CAP Charged, Marx Mode Max, Measurement Off, Buzzer Off

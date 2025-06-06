@@ -1,0 +1,809 @@
+{
+  "service": {
+    "southbound": {
+      "adapters": [
+        {
+          "name": "PEF.VIC",
+          "type": "Vitave.Service.Southbound.PEF.VIC.Adapter",
+          "assembly": "Vitave.Service.Southbound.PEF.VIC",
+          "enabled": true
+        },
+        {
+          "name": "PEF.PEN",
+          "type": "Vitave.Mock.Service.Southbound.PEF.PEN.Adapter",
+          "assembly": "Vitave.Mock",
+          "enabled": true
+        },
+        {
+          "name": "PEF.Measurement",
+          "type": "Vitave.Service.Southbound.PEF.Measurement.Adapter",
+          "assembly": "Vitave.Service.Southbound.PEF.Measurement",
+          "enabled": true,
+          "settings": {
+            "channel": {
+              "name": "COM2",
+              "type": "serial",
+              "configuration": "8N1",
+              "baud": 115200
+            }
+          }
+        }
+      ]
+    },
+
+    "modules": {
+      "control": {
+        "documentation": "Product Type: PEF, VPE_M2, VPG, VPS, VPP, VBP",
+        "ProductType": "VPG",
+
+        "documentationCP": "time for checking of sensors and command processing",
+        "checkPeriod": 50,
+
+        "settings": {
+          "general": {
+            "useLogin": false,
+	    
+            "DefaultUsername": "SpWSZO8eSAehMSvER6IKo1fNtdu9kmdVgYkEzoxwIbg=",
+            "DefaultPassword": "ENAbvRc4CwjOMlgkccbXP0zt7nF38oqcdZ4fpwa52OM=",
+
+            "CapacitorDischargeTimeSec": 3, //  5 min
+            "ShowWorkAndPulsingTimes": false,
+
+            "SiteId": "LAB - Gatech #1",
+            "Model": " CompactVPG 3kV",
+            "SerialNo": "VPG C20.T10.S10.V05.A20.P50",
+            "MaintenanceDueDate": "2025-05-01",
+
+            "DischargePresent": false,
+
+            "MaxAllowedCurrent": 100,
+            "MaxMarxCurrent": 100
+          },
+          "psu": {
+            "description": "VPG-xx - DEV - VMO",
+            "psuType": "VITAVE_PSU",
+            "controlType": "VIC",
+            "manufacturer": "Vitave Tech",
+
+            "minVoltage": 500,
+            "maxVoltage": 5000,
+
+            "voltageOneUnit": 1024,
+            "noOfUnits": 1,
+            "isSwitchedMW": false,
+            "oneMWThreshold": -1,
+            "StartPwmPromiles": 50,
+
+            "slowIncreaseVoltage": true,
+            "slowIncreaseVoltageTime": 2000,
+
+            "coolDownPeriodAfterPSUOFF": 5,
+            
+            //"basePWMOutFreq": 1000,
+            
+            "polarity": "UNIPOLAR"
+          },
+          "PwmTableAll": [
+            { "pwm": 5, "voltage": 49.5 },
+            { "pwm": 10, "voltage": 100.6 },
+            { "pwm": 15, "voltage": 150 },
+            { "pwm": 20, "voltage": 199.6 },
+            { "pwm": 25, "voltage": 248.2 },
+            { "pwm": 30, "voltage": 298},
+            { "pwm": 35, "voltage": 348.2 },
+            { "pwm": 40, "voltage": 403.7 },
+            { "pwm": 45, "voltage": 453.5 },
+            { "pwm": 50, "voltage": 504.1 },
+            { "pwm": 55, "voltage": 555.4 },
+            { "pwm": 60, "voltage": 605.3 },
+            { "pwm": 65, "voltage": 655.8},
+            { "pwm": 70, "voltage": 706.9 },
+            { "pwm": 75, "voltage": 759.3 },
+            { "pwm": 80, "voltage": 809.9 },
+            { "pwm": 85, "voltage": 863.4 },
+            { "pwm": 90, "voltage": 915.5 },
+            { "pwm": 95, "voltage": 966.7 },
+            { "pwm": 100, "voltage": 1024 }
+          ],
+          "switch": {
+            "marxFactor": 5,
+
+            "newGenerationMarx": true,
+
+            "polarity": "BIPOLAR",
+            "type": "Marx",
+            "allowExtTrigger": true,
+            "allowExtSignal": false,
+            "inductivity": false,
+            "inversePosNeg": false,
+            "useMarxModes": false,
+            "allowChangeFreq": false,
+            "allowDisableRogowski": false,
+            "extTriggerNoFreqLimit": false,
+            "allowSetPulseDuration": false,
+
+            "useMuxModes": true,
+            "muxModeThreshold": 300,
+            "muxModeMarxFactor": 1,
+
+            "allowExtTriggerDelay": true,
+            "allowExtTriggerCountdown": true,
+            "maxTriggerDelayValue": 100,
+            "maxCountdownValue": 1000,
+
+            "useMarxReadySignal": false,
+            "waitTimeForMarxReadySignal": 7000,
+            "marxReadySource": "DigitalIn", // Pwm_In
+
+            "PulseMinTime_T1_T3": 500,
+            "PulseMaxTime_T1_T3": 100000,
+            "PulseMinTime_T2_T4": 500,
+            "PulseMaxTime_T2_T4": 100000000,
+            "PulseMaxBurst": 100,
+            "PulseMaxRepetitions": 100,
+            "AllowEndlessPulses": true
+          },
+          "features": {
+            "useDoorInfo": false,
+            "useSecurityContact": false, // test !!!
+            "useACInfo": false,
+
+            "separatedVPGControlUnit": true,
+
+            "RemoteControlAPI-BasicAllowed": true,
+            "RemoteControlAPI-ExtSignalAllowed": false,
+            "RemoteControlAPI-ExtTriggerAllowed": false,
+            "RemoteControlAPI-ProfilesAllowed": true,
+            "RemoteControlAPI-MeasurementsAllowed": false,
+            "RemoteControlAPI-CurrentLimitAllowed": true,
+            "AuthenticationAPI-AuthenticationAllowed": true,
+            "AdministrationAPI-UserManagementAllowed": false,
+            "AdministrationAPI-ReportsAllowed": false,
+
+            "voltageDownWithDischarge": true,
+            "voltageDownTimeConst": 10,
+            
+            "voltageDownTime": 3000, // NewGenMarx
+            "psuOffTime": 0, // NewGenMarx
+
+            "allowCurrentConrol": false,
+            "minCurrent": 500,
+            "maxCurrent": 3500,
+            "minCurrentPwm": 20,
+            "maxCurrentPwm": 60,
+
+            //"EnabledVMO": true,  // old parameter - obsolete
+            "Measurement": {
+              "UseFeature": true,
+              "Type": "VMO",
+              "ShowGraph": true,
+
+              "Settings": {
+                "Version": 2,           // protocol version 2 = all data received in positive buffer only, after recalculate to real values, rearrange value to pos and neg buffers
+                "ProcessingVersion": 2, // 1 = standard (calibration table); 2 = measurement data with delimiter, use Snipe rules
+
+                "StorageBufferSize": 15,
+                "Values": "current",    // "both" as default, current
+
+                "VoltageCalibrationParameters": {
+                  "Af": -0.0219,
+                  "Bf": -0.06191,
+                  "Al": 0.0400,
+                  "Bl": 0.1814
+                },
+                "CurrentCalibrationParameters": {
+                  "Af": -0.0219,
+                  "Bf": -0.06191,
+                  "Al": 0.0400,
+                  "Bl": 0.1814
+                },
+
+                "VoltageCalibrationTable": [
+                  { "raw": 0, "real": 0 },
+                  { "raw": 250, "real": 500 },
+                  { "raw": 1000, "real": 2000 },
+                  { "raw": 2000, "real": 4000 },
+                  { "raw": 2500, "real": 5000 },
+                  { "raw": 10000, "real": 5100 }
+                ],
+                "CurrentCalibrationTable": [
+                  { "raw": 0, "real": 0 },
+                  { "raw": 450, "real": 5 },
+                  { "raw": 1700, "real": 20 },
+                  { "raw": 3500, "real": 40 },
+                  { "raw": 4000, "real": 50 },
+                  { "raw": 10000, "real": 51 }
+                ]
+              }
+            },
+
+            "ECU": {
+              "UseFeature": false,
+              "Type": "ELI_LASER",  // "Berlin"
+
+              "Settings": {
+                // table for conversion of current value to HW pin outputs
+                "CurrentConfiguration": [
+                  { "current": 3500, "outputMask": 1022 },
+                  { "current": 3400, "outputMask": 510 },
+                  { "current": 3300, "outputMask": 254 },
+                  { "current": 3200, "outputMask": 126 },
+                  { "current": 3100, "outputMask": 62 },
+                  { "current": 900, "outputMask": 30 },
+                  { "current": 800, "outputMask": 14 },
+                  { "current": 700, "outputMask": 8 },
+                  { "current": 600, "outputMask": 6 },
+                  { "current": 500, "outputMask": 1 }
+                ]
+              },
+
+              "Settings-Berlin": {
+                "ChannelConfiguration": [
+                  { "marxStep": 30, "outputMask": 1022 },
+                  { "marxStep": 26, "outputMask": 510 },
+                  { "marxStep": 22, "outputMask": 254 },
+                  { "marxStep": 18, "outputMask": 126 },
+                  { "marxStep": 14, "outputMask": 62 },
+                  { "marxStep": 10, "outputMask": 30 },
+                  { "marxStep": 6, "outputMask": 14 },
+                  { "marxStep": 4, "outputMask": 8 },
+                  { "marxStep": 2, "outputMask": 6 },
+                  { "marxStep": 1, "outputMask": 1 }
+                ]
+              }
+            },
+
+            "useTempSensors": false,
+            "fourTempsUsed": false,
+
+            "MarxCooling": {
+              "Type": "air",
+              "UseFlowmeter": false,
+              "UserTempSensor": false
+            },
+
+            "AdjustableOCP": {
+              "HWPresent": false,
+              "UseFeature": false,
+              "CurrentList": [ 30, 40, 50, 60, 70, 80, 90, 100 ],
+              "CalibrationTable": [
+                { "amps": 30, "pwm": 110 },
+                { "amps": 40, "pwm": 250 },
+                { "amps": 50, "pwm": 370 },
+                { "amps": 60, "pwm": 490 },
+                { "amps": 70, "pwm": 610 },
+                { "amps": 80, "pwm": 730 },
+                { "amps": 90, "pwm": 830 },
+                { "amps": 100, "pwm": 940 }
+              ]
+            },
+
+            "SnipeSpecific": {
+              "UseFeature": false,
+              "DisableTempSensors": true,
+              "DisableFeedbackPwmCheck": true,
+              "Af": -0.0219,
+              "Bf": -0.06191,
+              "Al": 0.0400,
+              "Bl": 0.1814
+            },
+
+            "useOpticStopSignal": false,
+
+            "useBuzzer": false,
+
+            "useAuditLog": true
+          }
+        },
+
+        "documentationPSU": "Set this value to false for to used SET VOLTAGE value as current. If true - show value from unit.",
+        "PSURealVoltage": true,
+        "PSUCheckBreaker": false
+      },
+      "cache": {},
+      "dataProvider": {
+        "documentation": "time between reading all non PICO modules (PLC, Invertor, DSC PSU)",
+        "readPeriod": 50,
+        "documentationPico": "time between reading PICO module. Zero value means that Pico is disabled",
+        "readPeriodPico": 0
+      },
+      "graph": {
+        "collectionInterval": 1000,
+        "processInterval": 60000,
+        "collectedBufferSize": 60,
+        "processedBufferSize": 30,
+        "sources": [
+
+        ]
+      }
+    }
+  },
+
+  "sensors": [
+
+    {
+      "documentation": "read DigitalOut PLC registers - Capacitor digital out status",
+      "obis": "1.0.0.1.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read DigitalIn PLC registers - Capacitor polarity status",
+      "obis": "1.0.0.1.1.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "write: command: Capacitor Discharge",
+      "obis": "1.0.0.102.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "PSU polarity ... ",
+      "obis": "1.0.1.1.1.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read: Capacitor Voltage Positive value",
+      "obis": "1.0.1.2.1.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read: Capacitor Voltage Negative value",
+      "obis": "1.0.1.2.2.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+
+
+    {
+      "documentation": "used unit: TRAFO = 1, LAMBDA = 2, DSC_DP100H = 3, VPS = 4, PWM = 5, UNKNOWN = 6",
+      "obis": "1.0.2.200.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+
+    {
+      "documentation": "read: output voltage",
+      "obis": "1.0.14.5.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read: output current",
+      "obis": "1.0.14.6.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+
+
+    {
+      "documentation": "read: PSU status: 0 - Off, >0 - On",
+      "obis": "1.0.14.1.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read: DigitalIn",
+      "obis": "1.0.14.1.1.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read command: PWM outputs",
+      "obis": "1.0.14.2.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read value: Cooldown period after PSU is OFF: 0 - no, 1 - yes",
+      "obis": "1.0.14.3.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read value: Snipe specific: feedback PSU PWM",
+      "obis": "1.0.14.7.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "write: command: On/Off",
+      "obis": "1.0.14.101.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write command: SetVoltage",
+      "obis": "1.0.14.102.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "write command: Current Limit",
+      "obis": "1.0.14.103.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write command: Voltage Limit",
+      "obis": "1.0.14.104.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read/write: command: CURRENT CONTROL",
+      "obis": "1.0.14.105.0.255",
+      "access": 3,
+      "processor": "PEF.VIC" // "PEF.ECU"
+    },
+
+    {
+      "documentation": "status M PLC registers: m1 - stykac, m3 - zamek, m5 - Cap discharge, m7 - PSU On/Off, m8 - Engine On/Off",
+      "obis": "1.0.3.1.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read: AI_3 registers: Door control: 0 - unknown, 1 - open (voltage under 2V), 2 - closed (voltage over 2V)",
+      "obis": "1.0.3.2.2.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read: AI_4 registers: UPS control: 0 - unknown, 1 - on AC power (voltage under 1V), 2 - battery (voltage over 1V)",
+      "obis": "1.0.3.2.3.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "write: command: Lock door",
+      "obis": "1.0.3.101.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read: Door Lock status to GUI: UNKNOWN = 0, LOCKED = 1, UNLOCKING_IN_PROGRESS = 2, UNLOCKED = 3, ERROR = 4",
+      "obis": "1.0.3.3.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "NEW PUMP: Pump type: 0 - NONE, 1 - INVERTOR, 2 - PRESSURE",
+      "obis": "1.0.3.100.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+
+    {
+      "documentation": "Marx switch temperature: input",
+      "obis": "1.0.5.3.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "Marx switch temperature: output",
+      "obis": "1.0.5.3.1.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "Internal load temperature. null if not exist, otherwise term in celsius",
+      "obis": "1.0.5.4.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "Chamber type. null if feature not works, 0 = NONE, 1 = SINGLE (Batch), 2 - CONTINOUS",
+      "obis": "1.0.5.5.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read: value: Marx is ready for work",
+      "obis": "1.0.5.6.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+
+    {
+      "documentation": "read: value: Marx cooling flow information",
+      "obis": "1.0.5.7.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read: value: Marx cooling temp information",
+      "obis": "1.0.5.7.1.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+
+
+    {
+      "documentation": "read: StartStop status register 0x0142",
+      "obis": "1.0.5.1.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read: Error status register 0x0000",
+      "obis": "1.0.5.1.2.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read/write: Circle count M status register 0x0141",
+      "obis": "1.0.5.1.1.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "write: command: SETUP valset",
+      "obis": "1.0.5.100.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write: command: START",
+      "obis": "1.0.5.101.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write: command: STOP",
+      "obis": "1.0.5.101.1.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write: command: RESET ERROR",
+      "obis": "1.0.5.102.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read/write: command: EXTERNAL SIGNAL",
+      "obis": "1.0.5.105.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read/write: command: EXTERNAL TRIGGER",
+      "obis": "1.0.5.106.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read/write: command: EXTERNAL TRIGGER DELAY",
+      "obis": "1.0.5.106.1.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read/write: command: EXTERNAL TRIGGER COUNDOWN",
+      "obis": "1.0.5.106.2.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write: command: USE MARX MODES",
+      "obis": "1.0.5.107.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write: command: CURRENT LIMITER (Rogowski on/off)",
+      "obis": "1.0.5.108.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write: command: Mux Mode: NORMAL of HALF",
+      "obis": "1.0.5.109.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read/write: command: Adjustable Over Current Protection",
+      "obis": "1.0.5.110.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "read: status: Optic signal stop",
+      "obis": "1.0.5.111.0.255",
+      "access": 1,
+      "processor": "PEF.VIC"
+    },
+    {
+      "documentation": "write: command: Change Frequency",
+      "obis": "1.0.5.100.1.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+    {
+      "documentation": "read/write: SET PROFILE status to GUI. See doc for more details",
+      "obis": "1.0.5.2.0.255",
+      "access": 3,
+      "processor": "PEF.VIC"
+    },
+
+
+    {
+      "documentation": "DEBUG only!!! 1 = ac power failure, 2 - ac power restore, 3 - door closed, 4 door open, 10-switchA temp 50/-1",
+      "obis": "1.0.100.100.0.255",
+      "access": 2,
+      "processor": "PEF.VIC"
+    },
+
+
+
+
+
+    {
+      "documentation": "read DigitalIn PLC registers - polarity status",
+      "obis": "1.0.11.1.1.255",
+      "access": 1,
+      "processor": "PEF.PEN"
+    },
+    {
+      "documentation": "read: AI_1 registers: Temperature",
+      "obis": "1.0.11.2.1.255",
+      "access": 1,
+      "processor": "PEF.PEN"
+    },
+
+
+
+
+    {
+      "documentation": "Read: Pico average Positive voltage value ",
+      "obis": "1.0.10.1.0.255",
+      "access": 4,
+      "processor": "PEF.Pico"
+    },
+    {
+      "documentation": "Read: Pico average Negative voltage value ",
+      "obis": "1.0.10.1.1.255",
+      "access": 4,
+      "processor": "PEF.Pico"
+    },
+
+
+    {
+      "documentation": "Read: Measurement of voltage and current: Positive voltage ",
+      "obis": "1.0.20.1.0.255",
+      "access": 1,
+      "processor": "PEF.Measurement"
+    },
+    {
+      "documentation": "Read: Measurement of voltage and current: Positive current",
+      "obis": "1.0.20.1.1.255",
+      "access": 1,
+      "processor": "PEF.Measurement"
+    },
+    {
+      "documentation": "Read: Measurement of voltage and current: Negative voltage ",
+      "obis": "1.0.20.1.2.255",
+      "access": 1,
+      "processor": "PEF.Measurement"
+    },
+    {
+      "documentation": "Read: Measurement of voltage and current: Negative current",
+      "obis": "1.0.20.1.3.255",
+      "access": 1,
+      "processor": "PEF.Measurement"
+    },
+    {
+      "documentation": "Read/Write: Measurement of voltage and current ",
+      "obis": "1.0.20.101.0.255",
+      "access": 3,
+      "processor": "PEF.Measurement"
+    },
+
+
+
+    {
+      "documentation": "Error codes to GUI...",
+      "obis": "1.0.100.0.0.255",
+      "access": 3
+    },
+
+
+    {
+      "documentation": "GUI INFO: ready. Used for Green LED off",
+      "obis": "1.0.100.1.0.255",
+      "access": 2
+    },
+
+    {
+      "documentation": "GUI INFO: Change product type",
+      "obis": "1.0.15.1.0.255",
+      "access": 3
+    },
+
+
+
+    {
+      "documentation": "TOTAL STOP: stop all modules",
+      "obis": "1.0.255.0.0.255",
+      "access": 3,
+      "processor": "PEF.VIC" // only for VPG !!!!
+    }
+
+  ],
+
+
+  "logging": {
+    "targets": {
+      "nmodbus4": {
+        "enabled": "true",
+        "level": "DEBUG",
+        "type": "bufferedfile",
+        "target": "NModbus4.log",
+        "maxRetainedFiles": 3
+      },
+      "southbound": {
+        "enabled": "true",
+        "level": "DEBUG",
+        "type": "bufferedfile",
+        "target": "southbound.log",
+        "maxRetainedFiles": 5
+      },
+      "serviceprovider": {
+        "enabled": "true",
+        "level": "DEBUG",
+        "type": "bufferedfile",
+        "target": "interface.log",
+        "maxRetainedFiles": 5
+      },
+      "mock": {
+        "enabled": "true",
+        "level": "DEBUG",
+        "type": "file",
+        "target": "mock.log",
+        "maxRetainedFiles": 5
+      },
+      "datacache": {
+        "enabled": "true",
+        "level": "DEBUG",
+        "type": "bufferedfile",
+        "target": "datacache.log",
+        "maxRetainedFiles": 5
+      },
+      "*": {
+        "enabled": "true",
+        "level": "DEBUG",
+        "type": "bufferedfile",
+        "target": "service.log",
+        "maxRetainedFiles": 5
+      }
+    }
+  }
+}
+
